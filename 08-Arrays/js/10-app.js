@@ -14,4 +14,4 @@ carrito.map( carrito => (
 ));
 
 
-console.log( Number.isInteger(1) );
+
