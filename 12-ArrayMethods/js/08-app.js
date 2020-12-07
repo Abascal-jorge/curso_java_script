@@ -8,3 +8,11 @@ const carrito = [
     { nombre: 'Teclado', precio: 400 },
     { nombre: 'Celular', precio: 700 },
 ]
+
+const meses2 = [...meses, "agosto"];
+console.table(meses2);
+
+
+const carrito2 = [ ...carrito, { nombre: "jose", precio: 90000}];
+
+console.log(carrito2);
