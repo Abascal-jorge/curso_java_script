@@ -8,3 +8,13 @@ const carrito = [
     { nombre: 'Teclado', precio: 400 },
     { nombre: 'Celular', precio: 700 },
 ]
+
+
+
+console.log( meses.includes("Marzo") );
+
+const tiene = carrito.some( producto => {
+    return producto.nombre === "Televisión";
+});
+
+console.log(tiene);
