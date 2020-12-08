@@ -1,8 +1,7 @@
-const navegacion = document.querySelector(".navegacion");
 
-//console.log(navegacion.childNodes);
-//console.log(navegacion.children);
+const contenedor = document.querySelector(".card");
+contenedor.children[0].src = "img/arriba.jpg"
+
+console.log(contenedor);
 
 
-const contenedorcards = document.querySelector(".contenedor-cards");
-console.log(contenedorcards.children[0].children[0].src);
