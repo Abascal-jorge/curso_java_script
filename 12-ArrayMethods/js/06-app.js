@@ -8,3 +8,5 @@ const carrito = [
     { nombre: 'Teclado', precio: 400 },
     { nombre: 'Celular', precio: 700 },
 ]
+
+setResultados([...arrayresultante, r]);
