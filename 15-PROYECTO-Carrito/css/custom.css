@@ -24,6 +24,8 @@ header {
         text-align: left;
     }
 }
+
+/*Para eliminar producto del carrito*/
 .borrar-curso {
     background-color: red;
     border-radius: 50%;
@@ -63,6 +65,7 @@ ul {
     min-height: 400px;
     min-width: 300px;
 }
+/*Vaciar carrito*/
 .vacio {
     padding: 10px;
     background-color: crimson;
