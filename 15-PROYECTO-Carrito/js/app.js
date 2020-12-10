@@ -94,3 +94,6 @@ vaciarCarrito.addEventListener("click", () => {
     agregarElementos(carritoElementos);
     //console.log(carritoElementos);
 });
+
+
+
