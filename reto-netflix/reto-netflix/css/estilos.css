@@ -1,0 +1,62 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: inherit;
+}
+
+body{
+    color: white;
+    background-color: black;
+}
+
+.features{
+    margin-top: -40px;
+}
+
+header{
+    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.5));
+    position: relative;
+    z-index: 2;
+}
+
+ul li{
+    list-style: none;
+    text-align: center;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+img{
+    width: 100%;
+}
+
+.cards-principal{
+    display: grid;
+    grid-template-columns: repeat(4, 130px);
+    grid-auto-flow: column;
+    column-gap: 10px;
+}
+
+p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cards-principal .cards{
+
+}
