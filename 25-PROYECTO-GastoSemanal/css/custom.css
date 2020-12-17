@@ -36,3 +36,43 @@ h2 {
     font-size: 22px;
     margin-bottom:30px;
 }
+
+.mostrar_presupuesto{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    background: red;
+    color: white;
+    padding: 10px;
+}
+
+ul li{
+    list-style: none;
+    text-transform: uppercase;
+    border: 1px solid gray;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+ul li span{
+    background: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+
+ul li a{
+    background-color: red;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    color: white !important;
+}
