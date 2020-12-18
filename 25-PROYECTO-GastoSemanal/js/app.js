@@ -33,11 +33,12 @@ function verificancionFormulario(e){
     let actualPresupuesto = usuarioPesupuesto.presupuestoActual();
 
     if( cantidad <= actualPresupuesto){
-        listadoPresupuesto = [...listadoPresupuesto, {gasto, cantidad}];
+        listadoPresupuesto = [...listadoPresupuesto, { gasto, cantidad}];
         usuarioPesupuesto.descontarPresupuesto(cantidad);
         UI.mostrarGastos(listadoPresupuesto);
         UI.llenarRestante( usuarioPesupuesto.damepresupuesto() );
         UI.tipoAlerta();
+        formulario.reset();
     }else{
         UI.mostrarErrorSueldo(`Tu presupuesto es de ${actualPresupuesto}`);
     }
@@ -129,8 +130,7 @@ class UI{
             eliminar.addEventListener("click", (e) => {
                 e.preventDefault();
                 //alert(lista.gasto);
-                const nuevoListado = listadoPresupuesto.filter( producto => producto.gasto !== lista.gasto);
-                listadoPresupuesto = [...nuevoListado];
+                listadoPresupuesto =  listadoPresupuesto.filter( producto => producto.gasto !== lista.gasto); 
                 UI.mostrarGastos(listadoPresupuesto); 
                 usuarioPesupuesto.aumentarPresupuesto(lista.cantidad);
                 UI.llenarRestante( usuarioPesupuesto.damepresupuesto() );
