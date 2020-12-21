@@ -52,7 +52,6 @@ function envio(dinero){
     presu.presupuestoValido();
 }
 
-
 //Clase para Descuento
 class IngresoSueldo{
 
@@ -130,7 +129,7 @@ class UI{
             eliminar.addEventListener("click", (e) => {
                 e.preventDefault();
                 //alert(lista.gasto);
-                listadoPresupuesto =  listadoPresupuesto.filter( producto => producto.gasto !== lista.gasto); 
+                listadoPresupuesto  =  listadoPresupuesto.filter( producto => producto.gasto !== lista.gasto); 
                 UI.mostrarGastos(listadoPresupuesto); 
                 usuarioPesupuesto.aumentarPresupuesto(lista.cantidad);
                 UI.llenarRestante( usuarioPesupuesto.damepresupuesto() );
