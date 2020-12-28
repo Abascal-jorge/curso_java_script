@@ -4,3 +4,50 @@ body {
   background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
 }
+
+
+.error{
+  background-color: white;
+  color: red;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+/*
+img{
+  width: 100%;
+}
+
+.card-paginas{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 10px;
+}
+
+.card{
+  color: white;
+  margin-bottom: 10px;
+}
+
+.card div span{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card div{
+  display: flex;
+  justify-content: center;
+}
+
+.card div p {
+  margin-left: 10px;
+}
+
+#paginacion{
+  display: flex;
+  justify-content: center;
+}
+
+#paginacion ul{
+  padding: 10px;
+}/*
