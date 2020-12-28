@@ -27,7 +27,6 @@ h2 {
     padding: 20px;
 }
 
-
 @media (min-width:768px) {
     .contenedor {
         display: flex;
