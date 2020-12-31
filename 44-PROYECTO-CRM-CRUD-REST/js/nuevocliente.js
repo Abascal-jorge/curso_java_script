@@ -1,4 +1,5 @@
 import { mostrarAlerta } from "./funciones.js";
+import { consultaAPI } from "./API.js";
 
 (function(){
     //Declaracion de variables de selectores
@@ -37,11 +38,13 @@ import { mostrarAlerta } from "./funciones.js";
     //Evento submit agregar cliente
     function onSubmitCliente(e){
         e.preventDefault();
+        
         if( !Object.values(datosCliente).every( input => input !== "") ){
             mostrarAlerta("Todos los campos son obligatorios");
             return;
         }
-        console.log("Todo correcto");
+
+        consultaAPI(datosCliente);
     }
 
 })();
