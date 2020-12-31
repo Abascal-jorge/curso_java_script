@@ -36,7 +36,24 @@ import { obtenerClientes, eliminar } from "./API.js";
     function eliminarCliente(e){
         if(e.target.classList.contains("eliminar") ){
             const clienteID = parseInt(e.target.dataset.cliente);
-            eliminar(clienteID);
+            Swal.fire({
+                title: 'Eliminar Cliente?',
+                text: "Si eliminas este elemento no podras recuperarlo!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si,Eliminar elemento!'
+            }).then((result) => {
+                if (result.isConfirmed) {  
+                    eliminar(clienteID);
+                    Swal.fire(
+                            'Cliente eliminado!',
+                            'El cliente fue eliminado',
+                            'success'
+                    );
+                }
+            });
         }
     }
 

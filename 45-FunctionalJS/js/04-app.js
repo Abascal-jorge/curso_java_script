@@ -8,3 +8,12 @@ const carrito = [
     { nombre: 'Bocinas', precio: 300},
     { nombre: 'Laptop', precio: 800},
 ];
+
+const nombresProducto = producto =>{
+    return producto.nombre;
+}
+
+const nombre = carrito.map( nombresProducto );
+console.log(nombre);
+console.log(carrito);
+

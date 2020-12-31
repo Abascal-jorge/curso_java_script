@@ -35,9 +35,41 @@ export const obtenerClientes = async () => {
 //Eliminando cliente
 
 export const eliminar = async id => {
-    await fetch(`${urlAPI}/${id}`,{
-        method: "DELETE"
-    })
+    try {
+        await fetch(`${urlAPI}/${id}`,{
+            method: "DELETE"
+        });     
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+//Actualizar cliente
+export const obtenerCliente = async id =>{
+    try {
+        const resultado = await fetch(`${urlAPI}/${id}`);
+        const cliente = await resultado.json();
+        return cliente;
+    } catch (error){
+        
+    }
 }
 
 
+//Actualiza el objeto
+export const editarCliente = async (cliente) => {
+    try {
+        await fetch(`${urlAPI}/${cliente.id}`,
+            {
+                method: "PUT",
+                body: JSON.stringify(cliente),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }
+        );
+        window.location.href = "index.html";
+    } catch (error) {
+        console.log(error);
+    }
+}
