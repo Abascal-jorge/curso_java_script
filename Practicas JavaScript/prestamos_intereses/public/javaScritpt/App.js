@@ -101,12 +101,16 @@ function mostrarHtml(informacion, cantidad, plazo){
     const parrafoPlazo = document.createElement("p");
     const totalPagar = document.createElement("p");
     const quincenasParrafo = document.createElement("p");
+    const resumen = document.createElement("h2");
 
+    resumen.textContent = "Resumen";
     parrafoCantidad.textContent = `La cantidad solicitada es: ${cantidad}`;
     parrafoPlazo.textContent = `El plazo solicitado para el prestamo: ${plazo} Meses`;
     totalPagar.textContent = `Total A pagar con interes de ${intereses} es de: ${total}`;
     quincenasParrafo.textContent = `El total se pagara en ${quincenas} quincenas con un pago de ${pagos}`;
 
+    resultado.classList.add("margen");
+    resultado.appendChild(resumen);
     resultado.appendChild(parrafoCantidad);
     resultado.appendChild(parrafoPlazo);
     resultado.appendChild(totalPagar);
@@ -139,5 +143,8 @@ function crearSpinner(){
 function limpiarHTML(){
     while(resultado.firstChild){
         resultado.firstChild.remove();
+        if(resultado.classList.contains("margen")){
+            resultado.classList.remove("margen");
+        }
     }
 }

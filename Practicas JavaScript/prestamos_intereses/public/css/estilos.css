@@ -72,6 +72,11 @@ h1{
 .resultado{
     text-align: center;
     margin-top: 40px;
+    padding: 20px;
+}
+
+.margen{
+  border: 2px solid rgb(60, 184, 241);
 }
 
 .error{
