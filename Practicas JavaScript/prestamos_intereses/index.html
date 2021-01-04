@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestamos y Intereses</title>
+    <link rel="stylesheet" href="public/css/estilos.css">
+</head>
+<body>
+    <h1>Cotizador de prestamos</h1>
+    <div class="contenedor">
+        <form id="formulario">
+            <div class="before">
+                <label for="cantidad">Cantidad Prestamo:</label>
+                <input id="cantidad" name="cantidad" type="text">
+            </div>
+            <div>
+                <label for="plazo">Plazo para Pagar</label>
+                <select name="plazo" id="plazo">
+                    <option value="">Seleccionar</option>
+                    <option value="1">Un mes</option>
+                    <option value="2">Dos meses</option>
+                    <option value="3">Tres meses</option>
+                    <option value="4">Cuatro meses</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Calcular" id="calcular">
+            </div>
+        </form>
+        <div class="resultado">
+            
+        </div>
+    </div>
+    <script src="public/javaScritpt/App.js"></script>
+</body>
+</html>

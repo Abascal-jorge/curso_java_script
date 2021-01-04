@@ -1,5 +1,5 @@
 //Variable para cachear archivos 
-const nombreCache = "apv-v1";
+const nombreCache = "apv-v3";
 
 const archivos = [
     "/",
@@ -34,7 +34,8 @@ self.addEventListener("activate", e => {
             .then( keys => {
                 //console.log(keys);
                 return Promise.all(
-                    keys.filter( key => key !== nombreCache).map(key => caches.delete(key))
+                    keys.filter( key => key !== nombreCache)
+                    .map(key => caches.delete(key))
                 )
             })
     );
