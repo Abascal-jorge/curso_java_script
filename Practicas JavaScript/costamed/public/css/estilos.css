@@ -89,12 +89,9 @@ header .navegacion-logo{
 }
 
 @media screen and (max-width: 780px){
-    .nav-menu{
-        transition:all 3s ease-in-out;
-     }
-     
     .ul-menu{
-        display: none;
+       margin-top: -1000px;
+       display: none;
     }
 
     .mobil-menu{
@@ -108,6 +105,7 @@ header .navegacion-logo{
 
     .mostrar_menu{
         display: block;
+        margin-top: 0;
         position: absolute;
         top: 100px;
         left: 0;
@@ -125,17 +123,28 @@ header .navegacion-logo{
     }
 }
 
-/*Aside y card medicos*/
-section{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;   
+@media screen and (max-width: 324px){
+    .icono-nav{
+        display: none;
+    }
 }
 
+/*Aside y card medicos*/
+
 aside .certificados-logo{
+    margin-top: 40px;
+    padding: 10px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    column-gap: 5px;
-    row-gap: 5px;
+    grid-template-columns: repeat(6, 200px);
+    justify-content: center;
+}
+
+.certificados{
+    text-align: center;
+}
+
+.certificados img{
+    width: 100px;
 }
 
 aside h3{
@@ -144,6 +153,72 @@ aside h3{
     font-weight: bold;
 }
 
+@media screen and (max-width: 850px){
+    aside .certificados-logo{
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 20px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 440px){
+    aside .certificados-logo{
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+/*Diseño cartas doctores*/
 main{
-    grid-column:  2 / 5;
+    width: 1200px;
+    margin: 40px auto 0 auto;
+}
+.nuestros-medicos h1{
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.nuestros-medicos p{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.doctores{
+    display: flex;
+    margin-top: 20px;
+}
+
+.doctores .card{
+    padding: 10px;
+    text-align: center;
+}
+
+.doctores .card img{
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1200px){
+    main{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 840px){
+    .doctores{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 10px;
+    }
+}
+
+@media screen and (max-width: 660px){
+    .doctores{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
 }
