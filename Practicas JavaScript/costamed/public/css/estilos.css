@@ -1,0 +1,149 @@
+*, ul, li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+*, ::after, ::before{
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: inherit;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+.icono-nav{
+    width: 200px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.mobil-menu{
+    display: none;
+}
+/*diseño menu var*/
+.navegacion-logo{
+    padding: 40px;
+}
+
+header .navegacion-logo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.ul-menu{
+    display: flex;
+}
+
+.idioma{
+    width: 100px;
+    display: flex;
+}
+
+.idioma img{
+    width: 40px;
+    margin: 0 10px;
+    display: block;
+}
+
+/*Secciones de navegacion*/
+.nav-menu .ul-menu .li-menu a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color:#90B5FF;
+    font-weight: bold;
+}
+
+.li-menu a span{
+   font-weight: bold;
+   color: black;
+   font-size: 1.3rem;
+}
+
+@media screen and (max-width: 856px){
+    .idioma{
+        width: 40px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 780px){
+    .ul-menu{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 780px){
+    .nav-menu{
+        transition:all 3s ease-in-out;
+     }
+     
+    .ul-menu{
+        display: none;
+    }
+
+    .mobil-menu{
+        display: block;
+        width: 40px;
+    }
+
+    .navegacion-logo{
+        padding: 20px;
+    }
+
+    .mostrar_menu{
+        display: block;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background-color: black;
+        width: 100%;
+    }
+    .li-menu a:hover{
+        background-color: blue;
+    }
+}
+
+@media screen and (min-width: 760px){
+    .banner{
+        height: 1200px;
+    }
+}
+
+/*Aside y card medicos*/
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;   
+}
+
+aside .certificados-logo{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+aside h3{
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+main{
+    grid-column:  2 / 5;
+}
