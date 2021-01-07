@@ -1,0 +1,49 @@
+body{
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(121,118,9,1) 69%, rgba(2,0,36,1) 100%);
+}
+
+*, ::after, ::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    box-sizing: inherit;
+}
+
+.formulario{
+    /*border: 1px solid red;*/
+    width: 1200px;
+    margin: 10px auto;
+}
+
+.buscar{
+    position: relative;
+}
+
+.buscar input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    -webkit-appearance: inherit;
+    outline: none;
+    border: 1px solid #eeeeee;
+}
+
+.buscar input[type="text"]:focus{
+    border: 1px solid red;
+}
+
+.buscar input[type="button"]{
+    background-image: url("../img/lupa.png");
+    background-repeat:no-repeat;
+    background-position: center;
+    position: absolute;
+    border: none;
+    padding: 10px;
+    right: 0;
+    top: 1;
+    width: 60px;
+    outline: none;
+}
