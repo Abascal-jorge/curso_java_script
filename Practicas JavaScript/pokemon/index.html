@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/estilos.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <form class="formulario">
+    <form class="formulario contenedor" id="formulario">
         <div class="buscar">
-            <input type="text">
+            <input type="text" id="buscarForm">
             <input  type="button">
         </div>
     </form>
+    <div class="spinner">
+
+    </div>
+    <div id="resultado" class="contenedor">
+        
+    </div>
 
     <script src="./js/api.js"></script>
 </body>
