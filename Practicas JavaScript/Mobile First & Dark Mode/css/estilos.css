@@ -13,6 +13,8 @@ body{
     --youtube : hsl(348, 97%, 39%);
     --gray : #aeb3c9;
     --gray2 : #6f7172;
+    --principal : #f0f3fa;
+    --card : #f0f3fa;
 }
 
 .wrapper{
@@ -47,8 +49,10 @@ h1{
 .card{
     border-radius: 8px;
     overflow: hidden;
-    background-color: #f0f3fa;
+    background-color: var(--card);
     text-align: center;
+    padding: 2em 0;
+    position: relative;
 }
 
 
@@ -61,7 +65,27 @@ h1{
     content: "";
     height: 4px;
     display: block;
+    background-color: var(--facebook); 
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.card.facebook::before{
     background-color: var(--facebook);
+}
+
+.card.facebook::before{
+    background-color: var(--twitter);
+}
+
+.card.instragan::before{
+    background-image: linear-gradient(to right, var(--instragan-1) 0%, var(--instragan-2) 100%);
+}
+
+.card.youtube::before{
+    background-color: var(--youtube);
 }
 
 .card-title{
@@ -110,4 +134,87 @@ h1{
 .grid{
     display: grid;
     row-gap: 25px;
+}
+
+/*Overviews*/
+.overview{
+    margin-top: 20px;
+}
+
+.overview h2{
+    color: var(--gray);
+}
+
+.card-small{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--card);
+    padding:20px;
+    row-gap: 1em;
+} 
+
+.card-small p{
+    margin: 0;
+}
+
+.card-small-views {
+    color: var(--gray);
+    font-weight: bold;
+    font-size: .9em;
+}
+
+.card-small-icon{
+    text-align: right;
+}
+
+.card-small-number{
+    font-weight: bold;
+    font-size: 2.7em;
+    line-height: .9;
+}
+
+.card-small-percentage{
+    text-align: right;
+    display: flex;
+    align-items: flex-end;
+    color: var(--line-green);
+    justify-content: flex-end;
+}
+
+.card-small-percentage.is-danger{
+    color: red;
+}
+
+.card-small-percentage span{
+    align-items: center;
+    padding-right: 5px;
+}
+
+/*Diseño responsible*/
+@media screen and (min-width: 480px){
+    .grid{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        column-gap: 25px;
+    }
+
+    
+    .wrapper{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: #1d2029;
+        color: white;
+
+    }
+    :root{
+        --card : #252b43;
+        --gray : #8088ad;
+    }
+    .header{
+        background-color: #1d2029;
+    }
 }
