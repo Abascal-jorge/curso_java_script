@@ -15,11 +15,9 @@ html{
 
 .contenedor{
   width: 1200px;
+  margin: 10px auto;
 }
-.formulario{
-    /*border: 1px solid red;*/
-    margin: 10px auto;
-}
+
 
 .buscar{
     position: relative;
@@ -52,7 +50,7 @@ img{
 }
 
 #resultado{
-    margin: 30px auto;
+    margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     column-gap: 10px;
@@ -113,6 +111,20 @@ img{
     width: 200px;
   }
 }
+
+/*Scroll Infinito*/
+.cargando{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+  width: 150px;
+  margin: 0 auto;
+  padding: 10px;
+  display: none;
+}
+
 /*sSpinner*/
 .sk-cube-grid {
   width: 40px;

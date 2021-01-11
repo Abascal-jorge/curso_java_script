@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+:root{
+    --line-green : hsl(163, 72%, 41%);
+    --bright-red : hsl(356, 69%, 56%);
+    --facebook : hsl(195, 100%, 50%);
+    --twitter : hsl(203, 89%, 53%);
+    --instragan-1 : hsl(37, 97%, 70%);
+    --instragan-2 : hsl(329, 70%, 58%);
+    --youtube : hsl(348, 97%, 39%);
+    --gray : #aeb3c9;
+    --gray2 : #6f7172;
+}
+
+.wrapper{
+    padding: 0 30px;
+}
+
+/*Header section*/
+.header{
+    background-color: #f0f3fa;
+    padding-bottom: 100px;
+    border-radius: 0 0 10px 10px;
+    padding-top: 2em;
+}
+
+.header-total{
+    margin: .5em 0;
+    font-weight: bold;
+    color: var(--gray);
+    border-bottom: 2px solid var(--gray);
+    padding-bottom: 1.5em;
+}
+
+h1{
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.top-cards{
+    margin-top: -40px;
+}
+/*Card section*/
+.card{
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f0f3fa;
+    text-align: center;
+}
+
+
+.fa-facebook-f{ color : hsl(203, 89%, 53%) }
+.fa-twitter{ color :hsl(195, 100%, 50%) }
+.fa-instagram-square { color :var(--instragan-2) } 
+.fa-youtube{ color:hsl(348, 97%, 39%) }
+
+.card:before{
+    content: "";
+    height: 4px;
+    display: block;
+    background-color: var(--facebook);
+}
+
+.card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray2);
+    font-size: .9em;
+    font-weight: bold;
+}
+
+.card-title i{
+    margin-right: 5px;
+}
+.card-followers{
+    
+}
+
+.card-followers-number{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.card-followers-title{
+    display: block;
+    text-transform: uppercase;
+    color: var(--gray);
+    letter-spacing: 2px;
+    font-size: .9em;
+}
+
+.card-today{
+    color: var(--line-green);
+    font-size: .7em;
+    font-weight: bold;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-today i{
+    margin-right: 2px;
+}
+
+.grid{
+    display: grid;
+    row-gap: 25px;
+}

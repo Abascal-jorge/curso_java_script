@@ -1,0 +1,225 @@
+*, ::after, ::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:#BDBDF5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html{
+    box-sizing: inherit;
+}
+
+ul li{
+    list-style: none;
+}
+
+.aside-contactos a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.icono{
+    width: 40px;
+    height: 40px;
+}
+
+/*Editando enlaces contactos*/
+.nav-contactos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Estilos display flex a los dos contenedores*/
+.principal-contenedor{
+    display: flex;
+}
+
+/*Estilos aside*/
+img{
+    width:100%;
+}
+
+.div-imagen{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 60px;
+}
+
+.div-imagen a{
+    grid-column: 2;
+}
+
+.aside-contactos{
+    display: block;
+    background-color: #8181D9;
+    width: 600px;
+    height: 100vh;
+    text-align: center;
+}
+
+.aside-contactos h1{
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+
+@media screen and (max-width: 780px){
+    .aside-contactos{
+        width: 100%;
+        height: 500px;
+    }
+
+    .principal-contenedor{
+        flex-direction: column;
+    }
+}
+
+
+/*Estilos Tablas*/
+
+main{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, (autofill, minmax(1fr, 200px)));
+}
+
+.main-contenido{
+    margin: 60px 20px 0 20px;    
+}
+
+.titulo-contacto{
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+#listado-contacto{
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+.encabezado-tabla td{
+    /*-webkit-box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+    */
+    background-color:white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.datos-listado td{
+    background-color: rgba(102, 63,200, 0.5);
+    /*color: white;*/
+}
+
+.datos-listado td{
+    padding: 10px;
+}
+
+/*CODIGO ELIMINAR Y EDITAR*/
+
+td a{
+    background-color: red;
+    padding: 5px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+td a:last-of-type{
+    background-color: green;
+    margin-left: 5px;
+}
+
+.botones{
+    display: flex;
+}
+
+
+@media screen and (max-width: 768px){
+    .botones{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/*CSS pagina img*/
+.personal-informacion{
+    width: 200px;
+    margin-left: 20px;
+    flex: 1;
+}
+
+/*Estilos al section formulario*/
+.section-formulario{
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+   /* border: 1px solid red;*/
+}
+
+@media screen and (max-width: 968px){
+    .section-formulario{
+        flex-direction: column;
+        width: 400px;
+    }
+}
+
+.formulario{
+    flex: 1;
+}
+
+.formulario form div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.formulario form div label{
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.formulario form div input[type="text"]{
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.formulario form div input[type="text"]:focus{
+    border: 1px solid green;
+}
+
+.submitFormulario input[type="submit"]{
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: #8181D9;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+/*Alerta*/
+.error{
+    background-color: red;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.error p{
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

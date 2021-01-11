@@ -2,6 +2,7 @@
 const resultado = document.querySelector("#resultado");
 const spinnerEtiqueta = document.querySelector(".spinner");
 const formulario = document.querySelector("#formulario");
+//vconst cargando = document.querySelector(".cargando");
 //Variables 
 let pokemones = [];
 let pokemonesData = [];
@@ -21,7 +22,7 @@ async function buscarPokemon(e){
         mostrarAlerta("Ingresa el pokemon que deseas buscar");
         return;
     }
-    const pokemonBuscado = await busquedaAPI(buscar);
+    const pokemonBuscado = await busquedaAPI(buscar.toLowerCase());
     if(pokemonBuscado){
         const objetoInformacion = {
             nombre: pokemonBuscado.name,
@@ -67,12 +68,6 @@ function mostrarNombres(datos){
 //function para consutar y obtener lo slink de las imagenes
 function obtenerLink(pokemones){
     pokemones.forEach( async pokemon => {
-        /*const datos = async () =>{
-            const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
-            await fetch(url)
-                .then(resultado => resultado.json())
-                .then(datos => informacionPokemones(datos))  // datos.sprites.other.dream_world.front_default
-        }*/
         informacionPokemones(await busquedaAPI(pokemon));
     });
 
@@ -120,6 +115,9 @@ function mostrarHTML(info){
         card_principal.appendChild(img);
         card_principal.appendChild(informacion);
         resultado.appendChild(card_principal);
+
+        //cargando.style.display = "block";
+       
 }
 
 //Creando Spinner
@@ -164,3 +162,15 @@ function mostrarAlerta(mensaje){
         }, 3000);
     }
 }
+
+
+/*SCROLL INFINITO
+const observer = new IntersectionObserver((entries) => {
+    if( entries[0].intersectionRatio > 0){
+        pokemonesData = [];
+        consultarAPI();
+    }
+});
+
+observer.observe(cargando);*/
+
