@@ -1,6 +1,8 @@
 body{
     margin: 0;
     font-family: 'Inter', sans-serif;
+    background-color: var(--baseBackground);
+    color: var(--baseColor);
 }
 
 :root{
@@ -15,6 +17,13 @@ body{
     --gray2 : #6f7172;
     --principal : #f0f3fa;
     --card : #f0f3fa;
+    --lightGray : #f0f3fa;
+    --baseBackground : white;
+    --baseColor : #1d2029;
+    --cardTitle : #6f717e;
+    --spinnerChange : linear-gradient(to right, #6f717e 0%, #6f717e 100%);
+    --spinnerBolita : white;
+
 }
 
 .wrapper{
@@ -23,7 +32,7 @@ body{
 
 /*Header section*/
 .header{
-    background-color: #f0f3fa;
+    background-color: var(--lightGray);
     padding-bottom: 100px;
     border-radius: 0 0 10px 10px;
     padding-top: 2em;
@@ -92,7 +101,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--gray2);
+    color: var(--cardTitle);
     font-size: .9em;
     font-weight: bold;
 }
@@ -190,6 +199,45 @@ h1{
     padding-right: 5px;
 }
 
+/*Dark Mode*/
+.dark-mode{
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkbox{
+    display: none;
+}
+.checkbox:checked ~ .switch:before{
+    transform: translateX(0);
+}
+
+.switch{
+    height: 36px;
+    display: block;
+    border-radius: 18px;
+    background-image: var(--spinnerChange);
+    width: 80px;
+    padding-top: 3px;
+    padding-left: 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+}
+
+.switch::before{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: var(--spinnerBolita);
+    border-radius: 50%;
+    transform: translateX(40px);
+    transition: .3s;
+    will-change: transform;
+}
+
 /*Diseño responsible*/
 @media screen and (min-width: 480px){
     .grid{
@@ -205,16 +253,15 @@ h1{
 }
 
 @media (prefers-color-scheme: dark){
-    body{
-        background-color: #1d2029;
-        color: white;
 
-    }
     :root{
         --card : #252b43;
         --gray : #8088ad;
-    }
-    .header{
-        background-color: #1d2029;
+        --lightGray : #1d2029;
+        --baseBackground : #1d2029;
+        --baseColor : white;
+        --cardTitle : #8088ad;
+        --spinnerChange: linear-gradient(to right, #4796d2 0%, green 100%);
+        --spinnerBolita : #282943;
     }
 }
