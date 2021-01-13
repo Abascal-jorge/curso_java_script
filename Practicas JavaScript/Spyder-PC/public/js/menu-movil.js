@@ -22,10 +22,5 @@ function mostrarMenu(){
 
 function scrollMostrar(e){
     e.preventDefault();
-    window.scroll(0, 998);
-    /*et observer = new IntersectionObserver(entries => {
-        console.log(entries[0]);
-    });
-    
-    observer.observe(cardServices);*/
+    window.scroll(0,cardServices.getBoundingClientRect().y);
 }
