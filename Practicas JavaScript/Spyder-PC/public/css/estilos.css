@@ -39,6 +39,10 @@ img{
     padding: 20px;
 }
 
+.banner-logo p{
+    cursor: pointer;
+}
+
 .menu-header{
     display: none;
 }
@@ -142,11 +146,6 @@ img{
 }
 
 /*Estilos card reparar*/
-
-.card-reparar{
-   
-}
-
 .card-reparar-info{
     padding: 40px;
 }
@@ -205,6 +204,7 @@ img{
 .card-services a{
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.4rem;
 }
 
 .services h2{
@@ -212,6 +212,97 @@ img{
     padding: 20px 0 10px 0;
     font-weight: bold;
     font-size: 2.4em;
+}
+
+/*Carousel trabajadores*/
+.trabajadores{
+    background-color: var(--whiteTexto);
+}
+
+.carousel-empleados{
+    text-align: center;
+    height: 400px;
+}
+
+.info-trabajadores img{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+}
+
+.info-trabajadores p{
+    font-weight: bold;
+    padding: 5px;
+}
+
+.descripcion-empleado{
+    font-size: 1.3rem;
+    margin-top: 15px;
+}
+
+.trabajadores h2{
+    text-align: center;
+    margin-top: 20px;
+    color: var(--blackTexto);
+}
+
+.trabajadores-info{
+    position: relative;
+    height: 400px;
+}
+
+.carousel-empleados{
+    position: absolute;
+    opacity: 0;
+    transition: all 3s ease-in;
+}
+
+.trabajadores-info :first-child{
+    opacity: 1;
+}
+
+
+/*Estilos al footer*/
+.footer{
+    background-color: var(--grayInformativo);
+}
+
+.contenido-footer{
+    text-align: center;
+}
+
+.contenido-footer .seccion-producto h3{
+    padding: 4px;
+}
+
+.contenido-footer .seccion-producto ul{
+    list-style: none;
+    display: none;
+}
+
+.contenido-footer .seccion-producto li{
+    padding: 10px;
+}
+
+/*Sociales footer*/
+.sociales{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.sociales i{
+    font-size: 30px;
+    padding: 5px;
+}
+
+.fa-facebook-square{ color: blue; }
+.fa-instagram{ color: #FA3C56; }
+.fa-youtube{ color: red; }
+.fa-whatsapp-square{ color: #02D508; }
+
+.footer .contenedor p{
+    margin-top: 10px;
+    text-align: center;
 }
 
 /*Medias query screen*/
@@ -265,6 +356,22 @@ img{
         align-items: center;
     }
 
+    .carousel-empleados{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenido-footer .seccion-producto ul{
+        display: block;
+    }
+
+    .contenido-footer{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        column-gap: 10px;
+    }
 }
 
 @media screen and (min-width: 860px){
