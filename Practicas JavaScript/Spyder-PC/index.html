@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./public/css/estilos.css">
     <link rel="stylesheet" href="./public/css/all.min.css">
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" > </script> 
 </head>
 <body>
     <header class="header">
@@ -50,7 +51,7 @@
     <section class="card-info">
         <div class="wrapper contenedor">
             <div class="card-seccion">
-                <div class="card">
+                <div class="card card1">
                     <h2>Reparacion a domicilio</h2>
                     <p>Espera la visita de uno de nuestros
                     técnicos expertos en tu comicilio para realizar
@@ -58,20 +59,20 @@
                     </p>
                     <a href="#">Solitar ahora</a>
                 </div>
-                <div class="card">
+                <div class="card card2">
                     <h2>Asistencia remota</h2>  
                     <p>
                         Te enlazamos mediante alguna aplicación de llamada con nuestro equipo de especialistas para guiarte paso a paso en el proceso de revisión y compostura de la computadora.
                     </p>
                     <a href="#">Solitar ahora</a>
                 </div>
-                <div class="card">
+                <div class="card card3">
                     <h2>Reparacion en taller</h2>
                     <p>Recibimos tu Computadora en nuestro taller donde atendemos diagnósticos especiales, damos servicio y mantenimiento a computadoras de alto desempeño.
                     </p>
                     <a href="#">Solitar ahora</a>
                 </div>
-                <div class="card">
+                <div class="card card4">
                     <h2>Reparacion en taller</h2>
                     <p>Recibimos tu Computadora en nuestro taller donde atendemos diagnósticos especiales, damos servicio y mantenimiento a computadoras de alto desempeño.
                     </p>
@@ -199,46 +200,83 @@
             </div>
         </div>
     </section>
+
+
+    <div class="contactanos contenedor wrapper">
+        <h2>Contactanos</h2>
+        <div class="flex-formulario">
+            <form id="formulario">
+                <div class="items-form">
+                    <label for="nombre">Nombre: </label>
+                    <input name="nombre" type="text" id="nombre">
+                </div>
+                <div class="items-form">
+                    <label for="apellido">Apellido</label>
+                    <input name="apellido" type="text" id="apellido">
+                </div>
+                <div class="items-form">
+                    <label for="telefono">telefono</label>
+                    <input name="telefono" type="text" id="telefono">
+                </div>
+                <div class="items-form">
+                    <label for="correo">Correo</label>
+                    <input name="correo" type="email" id="correo">
+                </div>
+                <input type="submit">
+            </form>
+            <div class="img-form">
+                <img src="./public/img/form.svg" alt="">
+            </div>
+        </div>
+    </div>
     
     <footer class="footer">
         <div class="contenedor wrapper">
             <div class="contenido-footer">
-                <div class="seccion-producto">
-                    <h3 id="productos">Productos</h3>
+                <details class="sec-productos">
+                    <summary>
+                        Productos
+                    </summary>
                     <ul>
                         <li>Computadoras</li>
                         <li>Impresoras</li>
                         <li>Limpiadores</li>
                         <li>Memorias RAM</li>
                     </ul>
-                </div>
-                <div class="seccion-producto">
-                    <h3 id="soluciones">Soluciones</h3>
+                </details>
+                <details class="sec-productos">
+                    <summary>
+                        Productos
+                    </summary>
                     <ul>
                         <li>Computadoras</li>
                         <li>Impresoras</li>
                         <li>Limpiadores</li>
                         <li>Memorias RAM</li>
                     </ul>
-                </div>
-                <div class="seccion-producto">
-                    <h3 id="compania">Compañia</h3>
+                </details>
+                <details class="sec-productos">
+                    <summary>
+                        Productos
+                    </summary>
                     <ul>
                         <li>Computadoras</li>
                         <li>Impresoras</li>
                         <li>Limpiadores</li>
                         <li>Memorias RAM</li>
                     </ul>
-                </div>
-                <div class="seccion-producto">
-                    <h3 id="soporte">Soporte</h3>
+                </details>
+                <details class="sec-productos">
+                    <summary>
+                        Productos
+                    </summary>
                     <ul>
                         <li>Computadoras</li>
                         <li>Impresoras</li>
                         <li>Limpiadores</li>
                         <li>Memorias RAM</li>
                     </ul>
-                </div>
+                </details>
             </div>
             <div class="sociales">
                 <i class="fab fa-facebook-square"></i>

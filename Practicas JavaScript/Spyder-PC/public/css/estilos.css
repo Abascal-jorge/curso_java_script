@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 html{
     box-sizing: inherit;
 }
@@ -25,6 +26,23 @@ img{
     padding: 20px;
 }
 
+.error{
+    padding: 10px;
+    color: white;
+    background-color: red;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid gray;
+}
+
+.complete{
+    padding: 10px;
+    color: white;
+    background-color: rgb(26, 179, 26);
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid gray;
+}
 /*Menu nav*/
 .header{
     background-color: var(--grayPrincipal);
@@ -242,8 +260,8 @@ img{
 
 .trabajadores h2{
     text-align: center;
-    margin-top: 20px;
     color: var(--blackTexto);
+    padding-top: 20px;
 }
 
 .trabajadores-info{
@@ -261,6 +279,49 @@ img{
     opacity: 1;
 }
 
+/*Formulario contactanos*/
+
+.contactanos h2{
+    padding: 20px 0 20px 0;
+    text-align: center;
+}
+
+.items-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.items-form label{
+    padding: 10px 0 10px 0;
+    font-weight: bold;
+    color: var(--blackTexto);
+    font-size: 1.2rem;
+}
+
+.items-form input[type="text"], input[type="email"]{
+    outline: none;
+    appearance: none;
+    border: 1px solid var(--grayInformativo);
+    padding: 15px;
+}
+
+.items-form input[type="email"]{
+    margin-bottom: 20px;
+}
+
+form input[type="submit"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border: 1px solid var(--grayInformativo);
+}
+
+.img-form{
+    margin-left: 10px;
+}
+
+
 
 /*Estilos al footer*/
 .footer{
@@ -271,17 +332,14 @@ img{
     text-align: center;
 }
 
-.contenido-footer .seccion-producto h3{
-    padding: 4px;
-}
-
-.contenido-footer .seccion-producto ul{
-    list-style: none;
-    display: none;
-}
-
-.contenido-footer .seccion-producto li{
+details summary{
+    outline: none;
+    border: none;
     padding: 10px;
+}
+
+details ul{
+    list-style: none;
 }
 
 /*Sociales footer*/
@@ -363,14 +421,30 @@ img{
         align-items: center;
     }
 
-    .contenido-footer .seccion-producto ul{
-        display: block;
+    details{
+        
+    }
+
+    details summary{
+        list-style: none;
+        appearance: none;
     }
 
     .contenido-footer{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         column-gap: 10px;
+    }
+    .flex-formulario{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        flex: 1;
+    }
+    .img-form{
+        flex: 1;
     }
 }
 
