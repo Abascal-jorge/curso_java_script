@@ -10,11 +10,16 @@ html{
 }
 
 :root{
-    --grayPrincipal : #CDCDCD;
-    --grayMovil : #A5A3A3;
-    --whiteTexto : white;
-    --grayInformativo : #9F9E9E;
+    --grayPrincipal : #1652F0;
+    --hoverEnlace : #DAD6D6; 
     --blackTexto: black;
+    --whiteTexto : white;
+    --botonPrincipal : #00A55D;
+    --grayInformativo : white;
+    --cardServices : #E9F6FF;
+    --footer : #113355;
+
+    --grayMovil : #A5A3A3;
     --serviceCard : rgb(192, 225, 240);
 }
 img{
@@ -47,6 +52,23 @@ img{
 .header{
     background-color: var(--grayPrincipal);
 }
+
+.header-menu{
+    background-color: var(--whiteTexto);
+}
+
+.header-menu .banner-logo p{
+    color: var(--grayPrincipal);
+}
+
+.header-menu .menu-icon{
+    color: var(--grayPrincipal);
+}
+
+.header-menu .navegacion{
+    border-bottom: 2px solid var(--hoverEnlace);
+}
+
 .navegacion{
     display: flex;
     justify-content: space-between;
@@ -57,7 +79,14 @@ img{
     padding: 20px;
 }
 
+.menu-icon{
+    color: var(--whiteTexto);
+}
+
 .banner-logo p{
+    color: var(--whiteTexto);
+    font-weight: bold;
+    font-size: 1.3rem;
     cursor: pointer;
 }
 
@@ -68,9 +97,9 @@ img{
 .menu-responsive{
     display: block;
     position: absolute;
-    top: 50px;
+    top: 65px;
     width: 100%;
-    background-color: var(--grayPrincipal);
+    background-color: var(--whiteTexto);
 }
 
 .menu-header ul{
@@ -82,17 +111,17 @@ img{
     text-decoration: none;
     color: var(--blackTexto);
     text-align: center;
+    font-weight: bold;
     padding: 10px;
 }
 
 .menu-header ul li a:hover{
-    background-color: var(--grayMovil);
-    color: var(--whiteTexto);
+    color: var(--grayMovil);
 }
 
 /*Info principal*/
 .info-principal{
-    background-color: var(--grayInformativo);
+    background-color: var(--grayPrincipal);
     height: 700px;
     color: var(--whiteTexto);
 }
@@ -105,6 +134,10 @@ img{
 .img-presentacion{
     text-align: center;
     color: var(--blackTexto);
+}
+
+.img-presentacion p{
+    color: var(--whiteTexto);
 }
 
 .presentacion h1{
@@ -124,6 +157,10 @@ img{
     text-align: center;
     border: none;
     margin-bottom: 10px;
+    color: var(--whiteTexto);
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: var(--botonPrincipal);
 }
 
 /*Seccion de */
@@ -136,7 +173,8 @@ img{
 }
 
 .card{
-    background-color: var(--grayPrincipal);
+    border: 1px solid var(--hoverEnlace);
+    background-color: var(--grayInformativo);
     color: var(--blackTexto);
     padding: 20px;
 }
@@ -156,11 +194,11 @@ img{
     display: block;
     text-decoration: none;
     width: 150px;
-    color: var(--blackTexto);
+    color: var(--whiteTexto);
     font-size: 1.3em;
     margin: 10px 0;
     padding: 10px;
-    background-color: var(--grayInformativo);
+    background-color: var(--botonPrincipal);
 }
 
 /*Estilos card reparar*/
@@ -196,6 +234,7 @@ img{
 /*estilos card services*/
 .services{
     background-color: var(--serviceCard);
+    color: var(--blackTexto);
 }
 
 .card-services{
@@ -223,6 +262,7 @@ img{
     text-decoration: none;
     font-weight: bold;
     font-size: 1.4rem;
+    color: #0A46E4;
 }
 
 .services h2{
@@ -301,7 +341,7 @@ img{
 .items-form input[type="text"], input[type="email"]{
     outline: none;
     appearance: none;
-    border: 1px solid var(--grayInformativo);
+    border: 1px solid var(--hoverEnlace);
     padding: 15px;
 }
 
@@ -314,7 +354,11 @@ form input[type="submit"]{
     border: none;
     outline: none;
     padding: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--whiteTexto);
     border: 1px solid var(--grayInformativo);
+    background-color: var(--grayPrincipal);
 }
 
 .img-form{
@@ -325,7 +369,8 @@ form input[type="submit"]{
 
 /*Estilos al footer*/
 .footer{
-    background-color: var(--grayInformativo);
+    background-color: var(--footer);
+    color: var(--whiteTexto);
 }
 
 .contenido-footer{
@@ -333,6 +378,8 @@ form input[type="submit"]{
 }
 
 details summary{
+    font-weight: bold;
+    font-size: 1.1rem;
     outline: none;
     border: none;
     padding: 10px;
@@ -353,10 +400,10 @@ details ul{
     padding: 5px;
 }
 
-.fa-facebook-square{ color: blue; }
-.fa-instagram{ color: #FA3C56; }
-.fa-youtube{ color: red; }
-.fa-whatsapp-square{ color: #02D508; }
+.fa-facebook-square{ color: var(--hoverEnlace); }
+.fa-instagram{ color: var(--hoverEnlace); }
+.fa-youtube{ color: var(--hoverEnlace); }
+.fa-whatsapp-square{ color:var(--hoverEnlace); }
 
 .footer .contenedor p{
     margin-top: 10px;
@@ -382,6 +429,10 @@ details ul{
         align-self: center;
         align-items: center;
         height: 100%;
+    }
+
+    .menu-header ul li a{
+        color: var(--whiteTexto);
     }
 
     .card-info-reparar{

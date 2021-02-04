@@ -1,5 +1,6 @@
 /*Variables selectorrees*/
 const menuMovil = document.querySelector("#menu-movil");
+const header = document.querySelector(".header");
 
 /*Variables enlaces menu */
 const scrollServices = document.querySelector("#enlace-servicios");
@@ -51,8 +52,10 @@ function mostrarMenu(){
         const menuHeader = document.querySelector(".menu-header");
         if(menuHeader.classList.contains("menu-responsive")){
             menuHeader.classList.remove("menu-responsive");
+            header.classList.remove("header-menu");
         }else{
             menuHeader.classList.add("menu-responsive");
+            header.classList.add("header-menu");
         }
 }
 
