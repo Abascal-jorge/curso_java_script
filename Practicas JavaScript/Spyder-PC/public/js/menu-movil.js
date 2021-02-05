@@ -5,10 +5,13 @@ const header = document.querySelector(".header");
 /*Variables enlaces menu */
 const scrollServices = document.querySelector("#enlace-servicios");
 const trabajadoresEnlace = document.querySelector("#enlace-trabajadores");
+const contactanosEnlace = document.querySelector("#enlace-contactanos");
+const buttonContactanos = document.querySelector("#contactanos-button");
 
 /*Variables selectores seccion indicadas */
 const cardServices = document.querySelector("#services-scroll");
 const trabajadores = document.querySelector("#trabajadores-section");
+const contactanos = document.querySelector("#seccion-contactanos");
 
 /*Selectores de trabajadores*/
 const trabajadorUno = document.querySelector("#uno");
@@ -40,7 +43,8 @@ function MyApp(){
     menuMovil.addEventListener("click", mostrarMenu);
     scrollServices.addEventListener("click", scrollMostrar);
     trabajadoresEnlace.addEventListener("click", trabajadoresMostrar);
-
+    contactanosEnlace.addEventListener("click", contactanosMostrar);
+    buttonContactanos.addEventListener("click", contactanosMostrar);
     /*Evento en los input*/
     nombreInput.addEventListener("input", obtenerDatos);
     apellidoInput.addEventListener("input", obtenerDatos);
@@ -69,6 +73,10 @@ function trabajadoresMostrar(e){
     window.scroll(0, trabajadores.getBoundingClientRect().y);
 }
 
+function contactanosMostrar(e){
+    e.preventDefault();
+    window.scroll(0, contactanos.getBoundingClientRect().y);
+}
 
 /*Codigo para pasar las imagenes trabajadores */
 let i = 1;

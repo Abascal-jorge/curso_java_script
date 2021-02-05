@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SPYDER PC</title>
     <link rel="stylesheet" href="./public/css/estilos.css">
     <link rel="stylesheet" href="./public/css/all.min.css">
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" > </script> 
@@ -23,7 +23,7 @@
                         <li class="menu-li"><a href="#">Inicio</a></li>
                         <li class="menu-li" id="enlace-trabajadores"><a href="#">Trabajadores</a></li>
                         <li class="menu-li" id="enlace-servicios"><a href="#">Servicios</a></li>
-                        <li class="menu-li"><a href="#">Asistencia</a></li>
+                        <li class="menu-li" id="enlace-contactanos"><a href="#">Asistencia</a></li>
                     </ul>
                 </nav>
             </div>
@@ -33,12 +33,12 @@
         <div class="wrapper contenedor">
             <article class="principal-article">
                 <div class="presentacion">
-                    <h1>Tienes problemas con tu computadora?</h1>
-                    <p>Nuestros Ingenieros en sistemas computacionales te brindan servicio de manera instantanea, gracias a los
-                        años hemos ampliado nuestros conocimientos e implementados soluciones de gran calidad que facilitan la 
-                        experiencia de nuestros clientes. 
+                    <h1>¿Tienes problemas con tu computadora?</h1>
+                    <p>Nuestros Ingenieros en sistemas computacionales te brindan servicio de manera instantánea,
+                    gracias a los años hemos ampliado nuestros conocimientos e implementados soluciones de gran calidad
+                    que facilitan la experiencia de nuestros clientes. 
                     </p>
-                    <button>Contactanos</button>
+                    <button id="contactanos-button">Contáctanos</button>
                 </div>
                 <div class="img-presentacion">
                     <img src="./public/img/img-principal.jpg" alt="">
@@ -52,32 +52,33 @@
         <div class="wrapper contenedor">
             <div class="card-seccion">
                 <div class="card card1">
-                    <h2>Reparacion a domicilio</h2>
-                    <p>Espera la visita de uno de nuestros
-                    técnicos expertos en tu comicilio para realizar
-                    el diagnostico y reparacion de tu computadora.
+                    <h2>Reparación a domicilio</h2>
+                    <p>Espera la visita de uno de nuestros técnicos expertos en tu domicilio
+                     para realizar el diagnostico y reparación de tu computadora.
                     </p>
-                    <a href="#">Solitar ahora</a>
+                    <a href="#">Solicitar ahora </a>
                 </div>
                 <div class="card card2">
                     <h2>Asistencia remota</h2>  
                     <p>
-                        Te enlazamos mediante alguna aplicación de llamada con nuestro equipo de especialistas para guiarte paso a paso en el proceso de revisión y compostura de la computadora.
+                        Te enlazamos mediante alguna aplicación de llamada con nuestro equipo de especialistas
+                        para guiarte paso a paso en el proceso de revisión y compostura de la computadora.
                     </p>
-                    <a href="#">Solitar ahora</a>
+                    <!--<a href="#">Solicitar ahora </a>-->
                 </div>
                 <div class="card card3">
-                    <h2>Reparacion en taller</h2>
+                    <h2>Reparación en taller</h2>
                     <p>Recibimos tu Computadora en nuestro taller donde atendemos diagnósticos especiales, damos servicio y mantenimiento a computadoras de alto desempeño.
                     </p>
-                    <a href="#">Solitar ahora</a>
+                    <!--<a href="#">Solicitar ahora </a>-->
                 </div>
                 <div class="card card4">
                     <h2>Asesoramiento en computo</h2>
-                    <p>No sabes que equipo comprar, no tienes claro si lo que compraras es lo que realmente necesitas, contactanos y te asesoramos en la compra de tu equipo,
-                     no compres algo que no te servira o que no es lo que necesitas contactanos.
+                    <p>No sabes qué equipo comprar, no tienes claro si lo que compraras es lo que realmente necesitas,
+                         contáctanos y te asesoramos en la compra de tu equipo, 
+                        no compres algo que no te servirá o que no es lo que necesitas contáctanos.
                     </p>
-                    <a href="#">Solitar ahora</a>
+                    <!--<a href="#">Solicitar ahora </a>-->
                 </div>
             </div>
         </div>
@@ -97,7 +98,7 @@
                         </p>
                         <ol>
                             <li>Ayudar a las personas con sus equipos de computo</li>
-                            <li>Asesorar en la compras de equipos</li>
+                            <li>Asesorar en las compras de equipos</li>
                             <li>Cuidar tus necesidades</li>
                         </ol>
                     </div>
@@ -108,13 +109,13 @@
                     </div>
                     <div class="card-reparar-info">
                         <h2>Visión</h2>
-                        <p>Ser la mejor empresa de playa del carmen en cuestion de reparación de equipos de computo, proporcionarte un trato amable y sincero
-                            a la hora de atender y causar una sensacion diferente en cada uno de nuestros clientes
+                        <p>Ser la mejor empresa de playa del Carmen en cuestión de reparación de equipos de cómputo, proporcionarte un trato amable y
+                             sincero a la hora de atender y causar una sensación diferente en cada uno de nuestros clientes
                         </p>
                         <ol>
                             <li>Mejorar día a día</li>
-                            <li>Ser una de las empresas lideres en soluciones tecnologicas</li>
-                            <li>Implementar nuevas tecnologias</li>
+                            <li>Ser una de las empresas líderes en soluciones tecnológicas</li>
+                            <li>Implementar nuevas tecnologías</li>
                         </ol>
                     </div>
                 </div>
@@ -123,16 +124,16 @@
     </section>
 
     <section class="services" id="services-scroll">
-        <h2>Services</h2>
+        <h2>Servicios</h2>
         <div class="services-items contenedor wrapper">
             <div class="card-services">
                 <div class="card-imagen-services">
                     <img src="./public/img/conejito.png" alt="">
                 </div>
                 <div class="card-info-services">
-                    <h2>Instalacion de camaras de seguridad</h2>
-                    <p>Instalacion de circuitos de vigilancia en tu casa u oficina...</p>
-                    <a href="#">Leer mas</a>
+                    <h2>Instalación de cámaras de seguridad</h2>
+                    <p>Instalación de circuitos de vigilancia en tu casa u oficina...</p>
+                    <!--<a href="#">Leer mas</a>-->
                 </div>
             </div>
             <div class="card-services">
@@ -140,9 +141,9 @@
                     <img src="./public/img/logo.png" alt="">
                 </div>
                 <div class="card-info-services">
-                    <h2>Servicio de reparacion de computadoras</h2>
-                    <p>Realizamos mantenimiento preventivo y correctivo en tus equipos..</p>
-                    <a href="#">Leer mas</a>
+                    <h2>Servicio de reparación de computadoras</h2>
+                    <p>Realizamos mantenimiento preventivo y correctivo en tus equipos.</p>
+                    <!--<a href="#">Leer mas</a>-->
                 </div>
             </div>
             <div class="card-services">
@@ -150,9 +151,9 @@
                     <img src="./public/img/reparar1.png" alt="">
                 </div>
                 <div class="card-info-services">
-                    <h2>Instalacion de red</h2>
-                    <p>Ofrecemos configuraciones de equipos de red y cableado de red..</p>
-                    <a href="#">Leer mas</a>
+                    <h2>Instalación de red</h2>
+                    <p>Ofrecemos configuraciones de equipos de red y cableado de red.</p>
+                    <!--<a href="#">Leer mas</a>-->
                 </div>
             </div>
             <div class="card-services">
@@ -160,9 +161,9 @@
                     <img src="./public/img/reparar1.png" alt="">
                 </div>
                 <div class="card-info-services">
-                    <h2>Servicio de reparacion de computadoras</h2>
-                    <p>Expert review from vetted professional code reviewers.</p>
-                    <a href="#">Leer mas</a>
+                    <h2>Soluciones tecnológicas para empresas</h2>
+                    <p>Realizamos proyectos que se adaptan a tus necesidades, explícanos tu problemas y buscaremos la forma de ayudarte.</p>
+                    <!--<a href="#">Leer mas</a>-->
                 </div>
             </div>
         </div>
@@ -176,30 +177,36 @@
                     <div class="info-trabajadores">
                         <img src="./public/img/jorge.jpg" alt="">
                         <p>Nombre: jorge abascal</p>
-                        <p>Puesto: Ingenerio en redes</p>
+                        <p>Puesto: Ingeniero en sistemas computacionales</p>
                     </div>
                     <div class="descripcion-empleado">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure sed, cumque hic delectus commodi velit illum illo qui natus pariatur quae nostrum odio explicabo vel necessitatibus, at ea voluptatum tempore?</p>
+                        <p>Ingeniero Jorge Abascal López, estudio en centro universitario de valladolid, se especializa en redes y implementaciones tecnologicas,
+                            a lo largo de su carrera a realizado proyectos de gran calidad y que mejoran los metodos en las empresas.
+                        </p>
                     </div>
                 </div>
                 <div class="carousel-empleados" id="dos">
                     <div class="info-trabajadores">
                         <img src="./public/img/manuel.jpg" alt="">
                         <p>Nombre: Manuel Abascal</p>
-                        <p>Puesto: Ingenerio en redes</p>
+                        <p>Puesto: Ingeniero en sistemas computacionales</p>
                     </div>
                     <div class="descripcion-empleado">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure sed, cumque hic delectus commodi velit illum illo qui natus pariatur quae nostrum odio explicabo vel necessitatibus, at ea voluptatum tempore?</p>
+                        <p>Ingeniero Manuel Abascal López, estudio en universidad tecnologica de playa del carmen, se especializa en seguridad de sistemas, redes y manejo de firewall para empresas de gran
+                            exigencia, sus conocimientos pueden aportar mucho a tu negocio.
+                        </p>
                     </div>
                 </div>
                 <div class="carousel-empleados" id="tres">
                     <div class="info-trabajadores">
                         <img src="./public/img/coboj.jpg" alt="">
-                        <p>Nombre: Juan arturo coboj</p>
-                        <p>Puesto: Ingenerio en redes</p>
+                        <p>Nombre: Juan Arturo Coboj Olivarez</p>
+                        <p>Puesto: Ingeniero en sistemas computacionales</p>
                     </div>
                     <div class="descripcion-empleado">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure sed, cumque hic delectus commodi velit illum illo qui natus pariatur quae nostrum odio explicabo vel necessitatibus, at ea voluptatum tempore?</p>
+                        <p>Ingeniero Juan Arturo Coboj Olivarez, estudio en el centro universitario de Valladolid, se especializa en 
+                            servidores para empresas con altas demandas tecnológicas, de igual manera tiene conocimientos en redes y firewall.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -207,8 +214,8 @@
     </section>
 
 
-    <div class="contactanos contenedor wrapper">
-        <h2>Contactanos</h2>
+    <div class="contactanos contenedor wrapper" id="seccion-contactanos">
+        <h2>Contáctanos</h2>
         <div class="flex-formulario">
             <form id="formulario">
                 <div class="items-form">
@@ -240,54 +247,52 @@
             <div class="contenido-footer">
                 <details class="sec-productos">
                     <summary>
-                        Productos
+                        Reparaciones
                     </summary>
                     <ul>
                         <li>Computadoras</li>
                         <li>Impresoras</li>
-                        <li>Limpiadores</li>
-                        <li>Memorias RAM</li>
+                        <li>Cámaras CCTV</li>
+                        <li>Escáner</li>
                     </ul>
                 </details>
                 <details class="sec-productos">
                     <summary>
-                        Productos
+                        Desbloqueos
                     </summary>
                     <ul>
+                        <li>Celulares</li>
                         <li>Computadoras</li>
-                        <li>Impresoras</li>
-                        <li>Limpiadores</li>
-                        <li>Memorias RAM</li>
+                        <li>Otros</li>
                     </ul>
                 </details>
                 <details class="sec-productos">
                     <summary>
-                        Productos
+                        Instalaciones
                     </summary>
                     <ul>
+                        <li>Software</li>
+                        <li>Circuitos de CCTV</li>
                         <li>Computadoras</li>
-                        <li>Impresoras</li>
-                        <li>Limpiadores</li>
-                        <li>Memorias RAM</li>
+                        <li>PC Gamer</li>
                     </ul>
                 </details>
                 <details class="sec-productos">
                     <summary>
-                        Productos
+                        Otros
                     </summary>
                     <ul>
-                        <li>Computadoras</li>
-                        <li>Impresoras</li>
-                        <li>Limpiadores</li>
-                        <li>Memorias RAM</li>
+                        <li>Cotizaciones de Computadoras</li>
+                        <li>Venta de productos</li>
+                        <li>Configuraciones de equipos</li>
                     </ul>
                 </details>
             </div>
             <div class="sociales">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-instagram"></i>
+                <a href="https://www.facebook.com/SPYDER-Reparaciones-de-equipos-de-computo-PC-MAC-140862766517681" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <!--<i class="fab fa-instagram"></i>
                 <i class="fab fa-youtube"></i>
-                <i class="fab fa-whatsapp-square"></i>
+                <i class="fab fa-whatsapp-square"></i>-->
             </div>
             <p>Copyright &#169; 2021, Spyder PC</p>
         </div>

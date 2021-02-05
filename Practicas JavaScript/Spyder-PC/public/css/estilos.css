@@ -322,6 +322,7 @@ img{
 /*Formulario contactanos*/
 
 .contactanos h2{
+    margin-top: 150px;
     padding: 20px 0 20px 0;
     text-align: center;
 }
@@ -433,6 +434,10 @@ details ul{
 
     .menu-header ul li a{
         color: var(--whiteTexto);
+    }
+
+    .contactanos h2{
+        margin-top: 10px;
     }
 
     .card-info-reparar{
