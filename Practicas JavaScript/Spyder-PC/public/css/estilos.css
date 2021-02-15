@@ -90,9 +90,9 @@ img{
     cursor: pointer;
 }
 
-.menu-header{
+/*.menu-header{
     display: none;
-}
+}*/
 
 .menu-responsive{
     display: block;
@@ -206,9 +206,7 @@ img{
     padding: 40px;
 }
 
-.card-reparar-imagen{
 
-}
 
 .card-reparar-info h2{
     font-weight: bold;
@@ -411,6 +409,9 @@ details ul{
     text-align: center;
 }
 
+nav{
+    display: none;
+}
 /*Medias query screen*/
 @media screen and (min-width: 768px){
     .info-principal{
@@ -419,8 +420,12 @@ details ul{
     .menu-icon{
         display: none;
     }
+    
+    .menu-responsive{
+        display:none;
+    }
 
-    .menu-header{
+    .header .menu-header{
         display: block;
     }
 
@@ -477,9 +482,6 @@ details ul{
         align-items: center;
     }
 
-    details{
-        
-    }
 
     details summary{
         list-style: none;

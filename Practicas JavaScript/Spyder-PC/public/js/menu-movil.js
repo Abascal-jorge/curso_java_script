@@ -53,14 +53,20 @@ function MyApp(){
 }
 
 function mostrarMenu(){
-        const menuHeader = document.querySelector(".menu-header");
+        const menuHeader = document.querySelector("nav");
+        if(!menuHeader.classList.contains("menu-responsive")){
+            menuHeader.classList.add("menu-responsive");
+            setTimeout(() => {
+                menuHeader.classList.remove("menu-responsive");
+            }, 2000);
+        }
+
+        /*
         if(menuHeader.classList.contains("menu-responsive")){
             menuHeader.classList.remove("menu-responsive");
-            header.classList.remove("header-menu");
         }else{
             menuHeader.classList.add("menu-responsive");
-            header.classList.add("header-menu");
-        }
+        }*/
 }
 
 function scrollMostrar(e){
