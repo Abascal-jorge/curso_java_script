@@ -11,7 +11,8 @@
     --colorNav : crimson;
     --colorBlanco : #fff;
     --colorNegro : #000;
-
+    --colorGris : #111;
+    --colorGris2 : #222;
     /*Variables tipo de texto*/
     --ubuntuSans: "Ubuntu", sans-serif;
 }
@@ -146,6 +147,19 @@ section{
     padding: 100px 0;
 }
 
+.about, .services, .skills{
+    font-family: "Poppins", sans-serif;
+}
+
+.about .about-content,
+.services .serv-content,
+.skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
 section .title{
     position: relative;
     text-align: center;
@@ -178,19 +192,9 @@ section .title::after{
     transform: translateX(-50%);
 }
 /* about section styling */
-.about, .services{
-    font-family: "Poppins", sans-serif;
-}
 
 .about .title::after{
     content: "who i am";
-}
-
-.about .about-content{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .about .about-content .left{
@@ -241,13 +245,73 @@ section .title::after{
 }
 
 /*Services section stylid*/
+.services{
+    color: var(--colorBlanco);
+    background-color: var(--colorGris);
+}
 
+.services .title::before{
+    background-color: var(--colorBlanco);
+} 
+    
 .services .title::after{
+    background-color: var(--colorGris);
     content: "What i provide";
 }
 
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    background-color: var(--colorGris2);
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover{
+    background-color: var(--colorNav);
+}
+
+.services .serv-content .card:hover .box{
+    transform: scale(1.05)
+}
 
 
+.services .serv-content .card i{
+    font-size: 50px;
+    color: var(--colorNav);
+    transition: color 0.3s ease;
+}
+
+.services .serv-content .card:hover i{
+    color: var(--colorBlanco);
+}
+
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* Skill Section styling */
+
+.skills .title::after{
+    content: "What i Know";
+}
+
+.skills .skills-content .column{
+    width: calc( 50% - 10px);
+}
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
 
 
 
@@ -342,6 +406,11 @@ section .title::after{
         flex: 100%;
     }
 
+    .services .serv-content .card{
+        width: calc( 50% - 10px );
+        margin-bottom: 20px;
+    }
+
 }
 
 @media screen and ( max-width: 690px ) {
@@ -361,6 +430,10 @@ section .title::after{
     .home .home-content a{
         font-size: 20px;
     }
+
+    .services .serv-content .card{
+        width: 100%;
+    }
 }
 
 @media screen and ( max-width: 500px ) {
@@ -371,4 +444,5 @@ section .title::after{
     .home .home-content .text-3{
         font-size: 27px;
     }
+
 }
