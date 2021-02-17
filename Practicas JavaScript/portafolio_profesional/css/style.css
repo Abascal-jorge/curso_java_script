@@ -147,7 +147,7 @@ section{
     padding: 100px 0;
 }
 
-.about, .services, .skills{
+.about, .services, .skills, .teams{
     font-family: "Poppins", sans-serif;
 }
 
@@ -245,7 +245,7 @@ section .title::after{
 }
 
 /*Services section stylid*/
-.services{
+.services, .teams{
     color: var(--colorBlanco);
     background-color: var(--colorGris);
 }
@@ -387,6 +387,33 @@ section .title::after{
 .skills .skills-content .right .node::before{
     width: 20%;
 }
+
+/* My teams Section Styling*/
+.teams .title::before{
+    background-color: var(--colorBlanco);
+}
+
+.teams .title::after{
+    content: "Who with me";
+    background-color: var(--colorGris);
+}
+
+.teams .carousel .card{
+    background-color: var(--colorGris2);
+    border-radius: 6px;
+    padding: 25px 35px;
+    margin-bottom: 10px;
+}
+
+.teams .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--colorNav);
+}
+
+
 /* Responsive media query start */
 
 @media screen and ( max-width: 1300px ) {
