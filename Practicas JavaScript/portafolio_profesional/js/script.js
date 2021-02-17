@@ -4,6 +4,7 @@ const spanLogo = document.querySelector(".logo a span");
 const menuoculto = document.querySelector("nav .menu");
 const cambiarIcono = document.querySelector(".menu-btn i");
 const clickMostrarMenu = document.querySelector(".menu-btn");
+const carousel = document.querySelector(".carousel");
 
 myApp();
 
@@ -34,3 +35,27 @@ function mostrarMenu(){
     }
 }
 
+//galearia teams
+
+$(document).ready(function(){
+    $('.carousel').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplayTimeOut: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0:{
+                items: 1,
+                nav: false
+            },
+            600:{
+                items: 2,
+                nav: false
+            },
+            1000:{
+                items: 3,
+                nav: false
+            }
+        }
+    });
+});
