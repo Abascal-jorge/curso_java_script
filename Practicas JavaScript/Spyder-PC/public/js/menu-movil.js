@@ -1,27 +1,105 @@
-/*Variables selectorrees*/
+const menuMovil = document.querySelector(".menu-btn");
+const navOculta = document.querySelector(".ul-nav");
+const cambiarIcono = document.querySelector(".menu-btn i");
+
+myApp();
+
+function myApp(){
+    menuMovil.addEventListener("click", mostrarMenu);
+    window.addEventListener("scroll", cambiarNav);
+}
+
+function mostrarMenu(){
+    if( !navOculta.classList.contains("active") ){
+        navOculta.classList.add("active");
+        cambiarIcono.classList.add("active");
+    }else{
+        navOculta.classList.remove("active");
+        cambiarIcono.classList.remove("active");
+    }
+}
+
+function cambiarNav(){
+    if( window.scrollY > 20){
+        document.querySelector(".navegacion").classList.add("sticky");
+        navOculta.classList.add("color");
+    }else{
+        document.querySelector(".navegacion").classList.remove("sticky");
+        navOculta.classList.remove("color");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+//Variables selectorrees
 const menuMovil = document.querySelector("#menu-movil");
 const header = document.querySelector(".header");
 
-/*Variables enlaces menu */
+//Variables enlaces menu 
 const scrollServices = document.querySelector("#enlace-servicios");
 const trabajadoresEnlace = document.querySelector("#enlace-trabajadores");
 const contactanosEnlace = document.querySelector("#enlace-contactanos");
 const buttonContactanos = document.querySelector("#contactanos-button");
 
-/*Variables selectores seccion indicadas */
+//Variables selectores seccion indicadas 
 const cardServices = document.querySelector("#services-scroll");
 const trabajadores = document.querySelector("#trabajadores-section");
 const contactanos = document.querySelector("#seccion-contactanos");
 
-/*Selectores de trabajadores*/
+//Selectores de trabajadores
 const trabajadorUno = document.querySelector("#uno");
 const trabajadorDos = document.querySelector("#dos");
 const trabajadorTres = document.querySelector("#tres");
 
-/* Selectores de opciones footer */
+// Selectores de opciones footer
 const productos = document.querySelector("#productos");
 
-/*variable formulario */
+//variable formulario 
 const formulario = document.querySelector("#formulario");
 const nombreInput = document.querySelector("#nombre");
 const apellidoInput = document.querySelector("#apellido");
@@ -45,7 +123,7 @@ function MyApp(){
     trabajadoresEnlace.addEventListener("click", trabajadoresMostrar);
     contactanosEnlace.addEventListener("click", contactanosMostrar);
     buttonContactanos.addEventListener("click", contactanosMostrar);
-    /*Evento en los input*/
+    //Evento en los input
     nombreInput.addEventListener("input", obtenerDatos);
     apellidoInput.addEventListener("input", obtenerDatos);
     telefonoInput.addEventListener("input", obtenerDatos);
@@ -61,12 +139,12 @@ function mostrarMenu(){
             }, 2000);
         }
 
-        /*
-        if(menuHeader.classList.contains("menu-responsive")){
-            menuHeader.classList.remove("menu-responsive");
-        }else{
-            menuHeader.classList.add("menu-responsive");
-        }*/
+        
+        //if(menuHeader.classList.contains("menu-responsive")){
+        //    menuHeader.classList.remove("menu-responsive");
+        //}else{
+        //    menuHeader.classList.add("menu-responsive");
+        //}
 }
 
 function scrollMostrar(e){
@@ -84,7 +162,7 @@ function contactanosMostrar(e){
     window.scroll(0, contactanos.getBoundingClientRect().y);
 }
 
-/*Codigo para pasar las imagenes trabajadores */
+//Codigo para pasar las imagenes trabajadores 
 let i = 1;
 setInterval(() => {
     if(i === 1){
@@ -106,7 +184,7 @@ setInterval(() => {
 
 mostrarDetails();
 mostrarAnimacione();
-/*mostrar open abiertos*/
+//mostrar open abiertos
 function mostrarDetails(){
     const detalles = document.querySelectorAll("details");
     if(screen.width >= 768){
@@ -122,7 +200,7 @@ function mostrarDetails(){
 
 
 
-/*Codigo animaciones con gulp */
+//Codigo animaciones con gulp 
 function mostrarAnimacione(){
     gsap.to(".card3", {duration: 0, x:3000});
     gsap.to(".card3",{ duration: 2.5, rotation: 360, x:0});
@@ -137,7 +215,7 @@ function mostrarAnimacione(){
     gsap.to(".card4",{ duration: 3, rotation: 360, y:0});
 }
 
-/*Validar formulario contacto */
+//Validar formulario contacto 
 function submitContacto(e){
     e.preventDefault();
     //const { nombre, apellido, telefono, correo} = datos;
@@ -184,4 +262,4 @@ function reiniciarDatos(){
     datos.apellido = "";
     datos.telefono = "";
     datos.correo = "";
-}
+}*/
