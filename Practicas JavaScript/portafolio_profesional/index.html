@@ -13,20 +13,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+
 </head>
 <body>
+    <div class="scroll-up-btn">
+        <i class="fa fa-angle-up"></i>
+    </div>
     <nav class="navbar">
         <div class="max-width">
             <div class="logo">
                 <a href="#">Portfo<span>lio.</span></a>
             </div>
             <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Teams</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#about" class="menu-btn">About</a></li>
+                <li><a href="#services" class="menu-btn">Services</a></li>
+                <li><a href="#skills" class="menu-btn">Skills</a></li>
+                <li><a href="#teams" class="menu-btn">Teams</a></li>
+                <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fa fa-bars"></i>
@@ -40,7 +45,7 @@
             <div class="home-content">
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Jorge Abascal López</div>
-                <div class="text-3">And I´m a <span>YouTuber</span></div>
+                <div class="text-3">And I´m a <span class="typing"></span></div>
                 <a href="#">Hire me</a>
             </div>
         </div>
@@ -55,7 +60,7 @@
                     <img src="/images/profile-1.jpeg" alt="">
                 </div>
                 <div class="column right">
-                    <div class="text">I´m Jorge and I´m a <span>Youtuber</span></div>
+                    <div class="text">I´m Jorge and I´m a <span class="typing2"></span></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nam quos quidem necessitatibus facilis tenetur vitae, ab iste porro voluptatibus, quaerat repellendus amet iure commodi itaque possimus impedit, doloremque sunt. Necessitatibus nulla architecto quae illo tempora, quam tempore assumenda tenetur debitis cum. Itaque quisquam nemo repellendus perferendis sunt blanditiis quam natus! Aperiam explicabo, tenetur soluta nemo odio nam nulla porro.</p>
                     <a href="#">Download CV</a>
                 </div>
@@ -64,7 +69,7 @@
     </section>
 
 
-    <!-- About section start -->
+    <!-- Services section start -->
     <section class="services" id="services">
         <div class="max-width">
             <h2 class="title">My Services</h2>
@@ -247,6 +252,11 @@
             </div>
         </div>
     </section>
+
+    <!--footer-->
+    <footer>
+        <span>Created By <a href="#">Jorge Abascal</a> &copy; 2020 All rights reserved</span>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
