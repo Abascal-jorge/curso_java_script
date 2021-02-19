@@ -21,12 +21,9 @@ html{
     --footer : #113355;
     --grayMovil : #A5A3A3;
     --serviceCard : rgb(192, 225, 240);
-
     /*Nuevos colores*/
     --colorCrimson : crimson;
     --whiteTexto : white;
-
-
     /*Letras*/
     --robotoPrincipal : "Roboto", sans-serif;
 }
@@ -58,78 +55,49 @@ img{
     border: 1px solid gray;
 }
 /*Menu nav*/
-.header{
-    background-color: var(--grayPrincipal);
+
+.logo p{
+    font-size: 20px;
+    color: var(--whiteTexto);
 }
 
-.header-menu{
-    background-color: var(--whiteTexto);
+.menu{
+    position: fixed;
+    width: 100%;
+    background-color: var(--colorCrimson);
+    z-index: 999;
 }
 
-.header-menu .banner-logo p{
-    color: var(--grayPrincipal);
-}
-
-.header-menu .menu-icon{
-    color: var(--grayPrincipal);
-}
-
-.header-menu .navegacion{
-    border-bottom: 2px solid var(--hoverEnlace);
-}
-
-.navegacion{
+.menu-content{
     display: flex;
     justify-content: space-between;
-    position: relative;
+    align-items: center;
 }
 
-.banner-logo, .menu-icon{
-    padding: 20px;
+.menu-content ul li{
+    display: inline-block;
 }
 
-.menu-icon{
-    color: var(--whiteTexto);
-}
-
-.banner-logo p{
-    color: var(--whiteTexto);
-    font-weight: bold;
-    font-size: 1.3rem;
-    cursor: pointer;
-}
-
-/*.menu-header{
-    display: none;
-}*/
-
-.menu-responsive{
-    display: block;
-    position: absolute;
-    top: 65px;
-    width: 100%;
-    background-color: var(--whiteTexto);
-}
-
-.menu-header ul{
-    list-style: none;
-}
-
-.menu-header ul li a{
+.menu-content ul li a{
     display: block;
     text-decoration: none;
-    color: var(--blackTexto);
-    text-align: center;
-    font-weight: bold;
+    color: var(--whiteTexto);
     padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
 }
 
-.menu-header ul li a:hover{
-    color: var(--grayMovil);
+.menu-btn{
+    display: none;
+    z-index: 999;
+    color: var(--whiteTexto);
+    font-size: 25px;
 }
+
 
 /*Info principal*/
 .info-principal{
+    padding-top: 100px;
     background-color: var(--grayPrincipal);
     height: 700px;
     color: var(--whiteTexto);
@@ -418,36 +386,33 @@ details ul{
     text-align: center;
 }
 
-nav{
-    display: none;
-}
 /*Medias query screen*/
-@media screen and (min-width: 768px){
-    .info-principal{
-        height: 500px;
-    }
-    .menu-icon{
-        display: none;
-    }
-    
-    .menu-responsive{
-        display:none;
-    }
-
-    .header .menu-header{
+@media screen and (max-width: 867px){
+    .menu-btn{
         display: block;
     }
 
-    .menu-header ul{
+    .menu-content ul{
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: var(--blackTexto);
+        height: 100vh;
+        width: 100%;
+        padding-top: 100px;
         display: flex;
-        justify-content: center;
-        align-self: center;
-        align-items: center;
-        height: 100%;
+        flex-direction: column;
+        text-align: center;
+        display: none;
     }
 
-    .menu-header ul li a{
-        color: var(--whiteTexto);
+   
+}
+
+
+@media screen and (min-width: 768px){
+    .info-principal{
+        height: 500px;
     }
 
     .contactanos h2{

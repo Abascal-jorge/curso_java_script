@@ -1,26 +1,3 @@
-/*Variables selectorrees*/
-const menuMovil = document.querySelector("#menu-movil");
-const header = document.querySelector(".header");
-
-/*Variables enlaces menu */
-const scrollServices = document.querySelector("#enlace-servicios");
-const trabajadoresEnlace = document.querySelector("#enlace-trabajadores");
-const contactanosEnlace = document.querySelector("#enlace-contactanos");
-const buttonContactanos = document.querySelector("#contactanos-button");
-
-/*Variables selectores seccion indicadas */
-const cardServices = document.querySelector("#services-scroll");
-const trabajadores = document.querySelector("#trabajadores-section");
-const contactanos = document.querySelector("#seccion-contactanos");
-
-/*Selectores de trabajadores*/
-const trabajadorUno = document.querySelector("#uno");
-const trabajadorDos = document.querySelector("#dos");
-const trabajadorTres = document.querySelector("#tres");
-
-/* Selectores de opciones footer */
-const productos = document.querySelector("#productos");
-
 /*variable formulario */
 const formulario = document.querySelector("#formulario");
 const nombreInput = document.querySelector("#nombre");
@@ -40,11 +17,6 @@ MyApp();
 
 function MyApp(){
     formulario.addEventListener("submit", submitContacto);
-    menuMovil.addEventListener("click", mostrarMenu);
-    scrollServices.addEventListener("click", scrollMostrar);
-    trabajadoresEnlace.addEventListener("click", trabajadoresMostrar);
-    contactanosEnlace.addEventListener("click", contactanosMostrar);
-    buttonContactanos.addEventListener("click", contactanosMostrar);
     /*Evento en los input*/
     nombreInput.addEventListener("input", obtenerDatos);
     apellidoInput.addEventListener("input", obtenerDatos);
@@ -52,68 +24,8 @@ function MyApp(){
     correoInput.addEventListener("input", obtenerDatos);
 }
 
-function mostrarMenu(){
-        const menuHeader = document.querySelector(".menu-header");
-        if(menuHeader.classList.contains("menu-responsive")){
-            menuHeader.classList.remove("menu-responsive");
-            header.classList.remove("header-menu");
-        }else{
-            menuHeader.classList.add("menu-responsive");
-            header.classList.add("header-menu");
-        }
-}
 
-function scrollMostrar(e){
-    e.preventDefault();
-    window.scroll(0, cardServices.getBoundingClientRect().y);
-}
-
-function trabajadoresMostrar(e){
-    e.preventDefault();
-    window.scroll(0, trabajadores.getBoundingClientRect().y);
-}
-
-function contactanosMostrar(e){
-    e.preventDefault();
-    window.scroll(0, contactanos.getBoundingClientRect().y);
-}
-
-/*Codigo para pasar las imagenes trabajadores */
-let i = 1;
-setInterval(() => {
-    if(i === 1){
-        trabajadorUno.style.opacity = "1";
-        trabajadorDos.style.opacity = "0";
-        trabajadorTres.style.opacity = "0";
-    }else if(i === 2){
-        trabajadorDos.style.opacity = "1";
-        trabajadorUno.style.opacity = "0";
-        trabajadorTres.style.opacity = "0";
-    }else{
-        trabajadorTres.style.opacity = "1";
-        trabajadorUno.style.opacity = "0";
-        trabajadorDos.style.opacity = "0";
-        i = 0;
-    }
-    i++;
-}, 10000);
-
-mostrarDetails();
 mostrarAnimacione();
-/*mostrar open abiertos*/
-function mostrarDetails(){
-    const detalles = document.querySelectorAll("details");
-    if(screen.width >= 768){
-        detalles.forEach( deta => {
-            deta.open = true;
-        });
-    }else{
-        detalles.forEach( deta => {
-            deta.open = false;
-        });
-    }
-}
-
 
 
 /*Codigo animaciones con gulp */
