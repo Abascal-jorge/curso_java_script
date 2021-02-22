@@ -341,15 +341,16 @@ img{
     font-size: 1.2rem;
 }
 
-.items-form input[type="text"], input[type="email"]{
+.items-form input[type="text"], input[type="email"], textarea{
     outline: none;
     appearance: none;
     border: 1px solid var(--hoverEnlace);
     padding: 15px;
 }
 
-.items-form input[type="email"]{
+.items-form textarea{
     margin-bottom: 20px;
+    resize: none;
 }
 
 form input[type="submit"]{

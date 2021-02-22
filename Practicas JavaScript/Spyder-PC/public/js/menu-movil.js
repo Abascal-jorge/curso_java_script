@@ -4,6 +4,7 @@ const nombreInput = document.querySelector("#nombre");
 const apellidoInput = document.querySelector("#apellido");
 const telefonoInput = document.querySelector("#telefono");
 const correoInput = document.querySelector("#correo");
+const mensajeInput = document.querySelector("#mensaje");
 
 //Variables para menu responsive
 const menuBtn = document.querySelectorAll(".menu-btn");
@@ -18,7 +19,8 @@ const datos = {
     nombre: "",
     apellido: "",
     telefono: "",
-    correo: ""
+    correo: "",
+    mensaje: ""
 };
 
 MyApp();
@@ -32,6 +34,7 @@ function MyApp(){
     apellidoInput.addEventListener("input", obtenerDatos);
     telefonoInput.addEventListener("input", obtenerDatos);
     correoInput.addEventListener("input", obtenerDatos);
+    mensajeInput.addEventListener("input", obtenerDatos);
 
     window.addEventListener("scroll", cambiarColor);
 
@@ -52,7 +55,7 @@ function MyApp(){
 }
 
 /*Validar formulario y obtener datos*/
-function submitContacto(e){
+async function submitContacto(e){
     e.preventDefault();
   
     if(!Object.values(datos).every(dato => dato != "")){
@@ -61,6 +64,8 @@ function submitContacto(e){
     }
     
     mostrarAlerta("Tenemos tus datos pronto nos contactaremos contigo", "complete");
+    console.log(datos);
+    await enviandoCorreo(datos);
     reiniciarDatos();
     formulario.reset();
 }
@@ -97,6 +102,7 @@ function reiniciarDatos(){
     datos.apellido = "";
     datos.telefono = "";
     datos.correo = "";
+    datos.mensaje = "";
 }
 /*Fin validacion Formulario*/
 
@@ -147,5 +153,15 @@ function cambiarColor(){
         document.querySelector(".menu").classList.add("stycky");
     }else{
         document.querySelector(".menu").classList.remove("stycky");
+    }
+}
+
+
+async function enviandoCorreo(datos){
+    try {
+        const url = `http://localhost:4000/correo`;
+        const resultado =  await axios.post(url, { datos });
+    } catch (error) {
+        console.log(error);
     }
 }
