@@ -6,20 +6,22 @@
     <title>SPYDER PC</title>
     <link rel="stylesheet" href="./public/css/estilos.css">
     <link rel="stylesheet" href="./public/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" > </script> 
 </head>
 <body>
+
     <nav class="menu" id="menu">
         <div class="wrapper contenedor">
             <div class="menu-content">
                 <div class="logo">
-                    <p>SPYDER PC & MAC</p>
+                    <a href="#home">SPYDER PC & MAC</a>
                 </div>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Trabajadores</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Asistencia</a></li>
+                    <li><a href="#home" class="menu-btn">Inicio</a></li>
+                    <li><a href="#trabajadores" class="menu-btn">Nuestro equipo</a></li>
+                    <li><a href="#services" class="menu-btn">Servicios</a></li>
+                    <li><a href="#contactanos" class="menu-btn">Contactanos</a></li>
                 </ul>
                 <div class="menu-btn">
                     <i class="fas fa-bars"></i>
@@ -28,28 +30,7 @@
         </div>
     </nav>
 
-    <!--
-    <header class="header">
-            <div class="navegacion contenedor">
-                <div class="banner-logo">
-                    <img src="./public/img/logo.png" alt="" class="logo-menu">
-                    <p>S.P.Y.D.E.R</p>
-                </div>
-                <div class="menu-icon" id="menu-movil">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <nav class="menu-header">
-                    <ul>
-                        <li class="menu-li"><a href="#">Inicio</a></li>
-                        <li class="menu-li" id="enlace-trabajadores"><a href="#">Trabajadores</a></li>
-                        <li class="menu-li" id="enlace-servicios"><a href="#">Servicios</a></li>
-                        <li class="menu-li" id="enlace-contactanos"><a href="#">Asistencia</a></li>
-                    </ul>
-                </nav>
-            </div>
-    </header>
-   -->
-    <section class="info-principal">
+    <section class="info-principal" id="home">
         <div class="wrapper contenedor">
             <article class="principal-article">
                 <div class="presentacion">
@@ -62,7 +43,6 @@
                 </div>
                 <div class="img-presentacion">
                     <img src="./public/img/img-principal.jpg" alt="">
-                    <p></p>
                 </div>
             </article>
         </div>
@@ -76,7 +56,7 @@
                     <p>Espera la visita de uno de nuestros técnicos expertos en tu domicilio
                      para realizar el diagnostico y reparación de tu computadora.
                     </p>
-                    <a href="#">Solicitar ahora </a>
+                    <a href="#contactanos">Solicitar ahora</a>
                 </div>
                 <div class="card card2">
                     <h2>Asistencia remota</h2>  
@@ -84,13 +64,13 @@
                         Te enlazamos mediante alguna aplicación de llamada con nuestro equipo de especialistas
                         para guiarte paso a paso en el proceso de revisión y compostura de la computadora.
                     </p>
-                    <a href="#">Solicitar ahora </a>
+                    <a href="#contactanos">Solicitar ahora </a>
                 </div>
                 <div class="card card3">
                     <h2>Reparación en taller</h2>
                     <p>Recibimos tu Computadora en nuestro taller donde atendemos diagnósticos especiales, damos servicio y mantenimiento a computadoras de alto desempeño.
                     </p>
-                    <a href="#">Solicitar ahora </a>
+                    <a href="#contactanos">Solicitar ahora </a>
                 </div>
                 <div class="card card4">
                     <h2>Asesoramiento en computo</h2>
@@ -98,7 +78,7 @@
                          contáctanos y te asesoramos en la compra de tu equipo, 
                         no compres algo que no te servirá o que no es lo que necesitas contáctanos.
                     </p>
-                    <a href="#">Solicitar ahora </a>
+                    <a href="#contactanos">Solicitar ahora </a>
                 </div>
             </div>
         </div>
@@ -143,12 +123,12 @@
         </div>
     </section>
 
-    <section class="services" id="services-scroll">
+    <section class="services" id="services">
         <h2>Servicios</h2>
         <div class="services-items contenedor wrapper">
             <div class="card-services">
                 <div class="card-imagen-services">
-                    <img src="./public/img/conejito.png" alt="">
+                    <i class="fas fa-video"></i>
                 </div>
                 <div class="card-info-services">
                     <h2>Instalación de cámaras de seguridad</h2>
@@ -158,7 +138,7 @@
             </div>
             <div class="card-services">
                 <div class="card-imagen-services">
-                    <img src="./public/img/logo.png" alt="">
+                    <i class="fas fa-tools"></i>
                 </div>
                 <div class="card-info-services">
                     <h2>Servicio de reparación de computadoras</h2>
@@ -168,7 +148,7 @@
             </div>
             <div class="card-services">
                 <div class="card-imagen-services">
-                    <img src="./public/img/reparar1.png" alt="">
+                    <i class="fas fa-network-wired"></i>
                 </div>
                 <div class="card-info-services">
                     <h2>Instalación de red</h2>
@@ -178,7 +158,7 @@
             </div>
             <div class="card-services">
                 <div class="card-imagen-services">
-                    <img src="./public/img/reparar1.png" alt="">
+                    <i class="fas fa-memory"></i>
                 </div>
                 <div class="card-info-services">
                     <h2>Soluciones tecnológicas para empresas</h2>
@@ -188,53 +168,45 @@
             </div>
         </div>
     </section>
-    
-    <section class="trabajadores" id="trabajadores-section">
+
+    <section class="trabajadores" id="trabajadores">
         <h2>Trabajadores</h2>
         <div class="contenedor wrapper">
-            <div class="trabajadores-info">
-                <div class="carousel-empleados" id="uno">
-                    <div class="info-trabajadores">
-                        <img src="./public/img/jorge.jpg" alt="">
-                        <p>Nombre: jorge abascal</p>
-                        <p>Puesto: Ingeniero en sistemas computacionales</p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="trabajador">
+                        <div class="imagen">
+                            <img src="/public/img/manuel.jpg" alt="">
+                        </div>
+                        <div class="info-trabajador">
+                            <p class="team-nombre">Ingeniero: Manuel Abascal López</p>
+                            <p class="info-personal">Ingeniero Manuel Abascal López, estudio en universidad tecnologica de playa del carmen, se especializa en seguridad de sistemas, redes y manejo de firewall para empresas de gran exigencia, sus conocimientos pueden aportar mucho a tu negocio.</p>
+                        </div>
                     </div>
-                    <div class="descripcion-empleado">
-                        <p>Ingeniero Jorge Abascal López, estudio en centro universitario de valladolid, se especializa en redes y implementaciones tecnologicas,
-                            a lo largo de su carrera a realizado proyectos de gran calidad y que mejoran los metodos en las empresas.
-                        </p>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="trabajador">
+                        <div class="imagen">
+                            <img src="/public/img/coboj.jpg" alt="">
+                        </div>
+                        <div class="info-trabajador">
+                            <p class="team-nombre">Ingeniero: Juan Arturo Coboj Olivarez</p>
+                            <p class="info-personal">Ingeniero Juan Arturo Coboj Olivarez, estudio en el centro universitario de Valladolid, se especializa en servidores para empresas con altas demandas tecnológicas, de igual manera tiene conocimientos en redes y firewall.</p>
+                        </div>
                     </div>
+                  </div>
                 </div>
-                <div class="carousel-empleados" id="dos">
-                    <div class="info-trabajadores">
-                        <img src="./public/img/manuel.jpg" alt="">
-                        <p>Nombre: Manuel Abascal</p>
-                        <p>Puesto: Ingeniero en sistemas computacionales</p>
-                    </div>
-                    <div class="descripcion-empleado">
-                        <p>Ingeniero Manuel Abascal López, estudio en universidad tecnologica de playa del carmen, se especializa en seguridad de sistemas, redes y manejo de firewall para empresas de gran
-                            exigencia, sus conocimientos pueden aportar mucho a tu negocio.
-                        </p>
-                    </div>
-                </div>
-                <div class="carousel-empleados" id="tres">
-                    <div class="info-trabajadores">
-                        <img src="./public/img/coboj.jpg" alt="">
-                        <p>Nombre: Juan Arturo Coboj Olivarez</p>
-                        <p>Puesto: Ingeniero en sistemas computacionales</p>
-                    </div>
-                    <div class="descripcion-empleado">
-                        <p>Ingeniero Juan Arturo Coboj Olivarez, estudio en el centro universitario de Valladolid, se especializa en 
-                            servidores para empresas con altas demandas tecnológicas, de igual manera tiene conocimientos en redes y firewall.
-                        </p>
-                    </div>
-                </div>
-            </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>            
         </div>
     </section>
 
-
-    <div class="contactanos contenedor wrapper" id="seccion-contactanos">
+    <div class="contactanos contenedor wrapper" id="contactanos">
         <h2>Contáctanos</h2>
         <div class="flex-formulario">
             <form id="formulario">
@@ -256,8 +228,25 @@
                 </div>
                 <input type="submit">
             </form>
-            <div class="img-form">
-                <img src="./public/img/form.svg" alt="">
+            <div class="terminos-condiciones">
+                <div class="terminos">Terminos y condiciones</div>
+                <div class="informacion-lega">Por este medio recibiremos tus datos personales que agregas en el formulario, estos se utilizaran unicamente para comunicarnos contigo
+                    para el tramite de revision o solicitud de algun servicio.
+                </div>
+                <div class="terminos-iconos">
+                    <div>
+                        <i class="fas fa-stopwatch"></i>
+                        <p>Nos comunicaremos contigo en un lapso de una hora.</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <p>Manuelabascal@gmail.com</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-user-alt"></i>
+                        <p>Manuel Abascal López</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -318,6 +307,7 @@
         </div>
     </footer>
     
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./public/js/menu-movil.js"></script>
 </body>
 </html>
