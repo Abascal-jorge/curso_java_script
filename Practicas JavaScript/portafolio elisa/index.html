@@ -6,39 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div>
-            <div class="logo">
 
+    <!--Header Principal-->
+    <header>
+        <div class="menu-principal contenedor">
+            <div class="logo">
+                <p>LOGO</p>
             </div>
-            <nav>
+            <nav class="navegacion">
                 <ul>
-                    <li><a href="#">Hola</a></li>
-                    <li><a href="#">Proyectos</a></li>
-                    <li><a href="#">Hablemos</a></li>
+                    <li><a href="#hola">Hola</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#hablemos">Hablemos</a></li>
                 </ul>
             </nav>
-            <button>Descargar corrículum</button>
+            <button>Currículum</button>
         </div>
     </header>
 
-    <!--Section Principal-->
-    <section class="principal-info">
-        <div>
+    <!--Principal informacion section-->
+    <section class="principal-info" id="hola">
+        <div class="contenedor">
             <div class="flex-info">
                 <div class="datos-personales">
-                    <p>!Hola a todos!</p>
-                    <p>Soy Elisa</p>
-                    <p>Una frontend developer que le encanta implementar diseños
-                        que inspiran y atraen personas
+                    <p class="texto-saludo">!Hola a todos!</p>
+                    <p class="texto-nombre">Soy Elisa</p>
+                    <p class="texto-descripcion">Una frontend developer que le encanta implementar diseños
+                        que inspiran y atraen a las personas
                     </p>
                     <div class="sociales">
-                        <a href="#">social</a>
-                        <a href="#">social</a>
-                        <a href="#">social</a>
-                        <a href="#">social</a>
+                        <a href="#"><i class="fas fa-phone-alt"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="#"><i class="fab fa-instagram-square"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 <div class="img-principal">
@@ -54,6 +57,118 @@
                 </div>
             </div>
         </div>
+    </section> 
+
+    <!--Section proyectos -->
+    <section class="proyectos" id="proyectos">
+        <div class="contenedor">
+            <div class="sobre-mi">
+                <p class="texto-profesion">
+                    A lo largo de mi carrera como Frontend, he tenido el 
+                    privilegio de trabajar en proyectos retadores e increibles
+                </p>
+                <p class="texto-ejemplo">Aquí hay algunos que me gustaría compartir.</p>
+                <i class="fas fa-arrow-down"></i>
+            </div>
+            <article class="proyectos-realizados">
+                <div class="info-proyecto">
+                    <img src="./public/img/compu.jpg" alt="Imagen de la pagina web">
+                    <div class="datos-pagina">
+                        <a class="title-enlace">Leonidasesteban.com</a>
+                        <p>Accede a mas de 120 proyectos que te ayudaran
+                            a mejorar tus habilidades como front-end.
+                        </p>
+                        <div class="enlace-sitio">
+                            <button>Ver proyecto</button>
+                            <button><i class="fab fa-github"></i>  ver codigo</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio">
+                    <img src="./public/img/user.png" alt="Imagen del usuario">
+                    <p class="resumen">"Elisa ha sido de gran ayuda para acelerar ciertos esfuerzos de desarrollo. Lo que nos hubiera llevado 6 meses solo les llevo 1,5 meses".</p>
+                    <p class="confundador">Leonidas Estaban / Confundador y ceo leonidasesteban.com</p>
+                </div>
+            </article>
+            <article  class="proyectos-realizados">
+                <div class="info-proyecto">
+                    <img src="./public/img/movies.jpg" alt="Imagen de la pagina web">
+                    <div class="datos-pagina">
+                        <a class="title-enlace">Marvol</a>
+                        <p>Es el sitio oficial de marvol entertainment. Explore peliculas, personajes, comics
+                        </p>
+                        <div class="enlace-sitio">
+                            <button>Ver proyecto</button>
+                            <button><i class="fab fa-github"></i> ver codigo</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio">
+                    <img src="./public/img/user.png" alt="Imagen del usuario">
+                    <p>"Elisa ha sido de gran ayuda para acelerar ciertos esfuerzos de desarrollo. Lo que nos hubiera llevado 6 meses solo les llevo 1,5 meses".</p>
+                    <p class="confundador">Jason lopez / confundador y ceo marvol</p>
+                </div>
+            </article>
+            <article  class="proyectos-realizados">
+                <div class="info-proyecto">
+                    <img src="./public/img/tablet.png" alt="Imagen de la pagina web">
+                    <div class="datos-pagina">
+                        <a class="title-enlace">Netnet</a>
+                        <p>Peliculas y series ilimitadas y mucho mas. Difruta donde quieras, cancela cuando quieras
+                        </p>
+                        <div class="enlace-sitio">
+                            <button>Ver proyecto</button>
+                            <button><i class="fab fa-github"></i> ver codigo</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio">
+                    <img src="./public/img/user.png" alt="Imagen del usuario">
+                    <p>"Por primera vez en la historia nuestra empresa, aparecimos en todas las plataformas en las que trabajamos".</p>
+                    <p class="confundador">Marco cortez / netnet</p>
+                </div>
+            </article>
+        </div>
     </section>
+
+    <!--Hablesmos section-->
+    <section class="hablemos" id="hablemos">
+        <div class="contenedor">
+            <a class="title-enlace">Hablemos</a>
+            <p>Si esta interesado en trabajar conmigo en su proximo proyecto, no dude en ponerse en contacto conmigo.</p>
+            <form>
+                <div>
+                    <label for="">Nombre completo<span>*</span></label>
+                    <input type="text" placeholder="Juan">
+                </div>
+                <div>
+                    <label for="">Correo electronico<span>*</span></label>
+                    <input type="text" placeholder="Juan">
+                </div>
+                <div>
+                    <label for="">Mensaje<span>*</span></label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <input type="submit" value="Enviar mensaje">
+            </form>
+        </div>
+    </section>
+
+    <!--Footer pagina-->
+    <footer>
+        <div class="contenedor">
+            <div class="sociales">
+                <a href="#"><i class="fas fa-phone-alt"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="info-pie">
+                <p>Hecho con <span>&#x2665;</span> de elisa</p>
+                <p>Copyright 2021 &#xA9; - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

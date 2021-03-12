@@ -1,12 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700;900&display=swap');
+
 body{
+    position: relative;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(249,211,174,1) 0%, rgba(246,193,166,1) 35%, rgba(244,177,159,1) 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;
+}
+
+/*Styled menu bar*/
+.menu-principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins";
+}
+
+.menu-principal .navegacion{
+    display: none;
+}
+
+.menu-principal .logo p{
+    font-weight: 900;
+}
+
+.menu-principal button{
+    background-color: rgba(66, 226, 184, 1);
+    padding: 10px;
+    border-radius: 16px;
+    border: none;
+    font-weight: 700;
+}
+
+/*Styled informaciion princiapl*/
+
+.principal-info{
+    font-family: "Poppins";
+}
+
+.flex-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.datos-personales .texto-saludo{
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 24px;
+    padding: 20px 0 10px;
+}
+
+.datos-personales .texto-nombre{
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 34px;
+    padding: 10px 0;
+}
+
+.datos-personales .texto-descripcion{
+    letter-spacing: 1;
+    font-size: 10.5px;
+    padding-bottom: 15px;
+}
+
+/*Menu social*/
+    .sociales .fas, .sociales .fab{
+        padding: 10px;
+        border: 2px solid black;
+        background-color: rgba(66, 226, 184, 1);
+    }
+
+    .fa-phone-alt, .fa-envelope, .fa-instagram-square, .fa-twitter{
+        color: black;
+    }
+/*----------*/
+
+.flex-info .img-principal{
+    order: -1;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.flex-info .img-principal .vector-verde{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.flex-info .img-principal .vector-morado{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.flex-info .img-principal .imagen{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.vector-verde img{
+    width: 238.05px;
+    height: 148.56px;
+}
+
+.vector-morado img{
+    margin-top: -10px;
+    width: 164.05px;
+    height: 154.77px;
+}
+
+.imagen img{
+    width: 123.36px;
+    height: 124.44px;
+    margin-left: -20px;
+}
+
+/*styled proyectos*/
+img{
+    width: 100%;
+}
+.proyectos{
+    font-family: "Poppins";
+}
+
+.proyectos .sobre-mi{
+    text-align: center;
+}
+
+.proyectos .sobre-mi .texto-profesion{
+    padding: 30px 0;
+}
+
+.proyectos .sobre-mi .texto-ejemplo{
+    padding: 10px;
+    font-weight: 500;
+}
+
+.proyectos .sobre-mi i{
+    padding: 10px;
+    font-size: 35px;
+}
+
+.proyectos-realizados{
+    margin-top: 50px;
+}
+
+.proyectos-realizados .info-proyecto{
+    padding: 10px 0;
+}
+
+.title-enlace{
+    display: block;
+    width: 180px;
+    color: rgba(66, 226, 184, 1);
+    background-color: black;
+    padding: 5px;
+    position: relative;
+    font-family: "Poppins";
+    text-transform: uppercase;
+}
+
+.title-enlace::before{
+    content: "";
+    position: absolute;
+    border: 2px solid white;
+    width: 180px;
+    bottom: -2px;
+    left: -2px;
+}
+
+.title-enlace::after{
+    content: "";
+    position: absolute;
+    border-left: 3px solid white;
+    bottom: -2px;
+    left: -2px;
+    height: 35px;
+}
+
+.info-proyecto .datos-pagina p{
+    padding: 20px 0;
+}
+
+.enlace-sitio button{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    background-color: rgba(66, 226, 184, 1);
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.enlace-sitio button:hover{
+    background: none;
+}
+
+.testimonio{
+    padding: 10px 15px;
+    text-align: center;
+    background-color: rgba( 255, 255, 255, .2);
+    border-radius: 16px;
     position: relative;
 }
 
-.elipse{
+.testimonio::before{
+    content: "";
     position: absolute;
-    width: 400px;
-    height: 400px;
-    left: 377px;
-    top: 544px;
-    background: radial-gradient(155% 155% at 50% 50%, rgba(40, 234, 232, 0.4) 0%, rgba(40, 234, 232, 0) 28.86%);
+    width: 75%;
+    height: 60%;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    border-top-left-radius: 16px;
+    top: 0;
+    left: 0;
 }
+
+.testimonio img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 20px 0;
+}
+
+.testimonio p{
+    padding: 10px 0;
+    text-align: left;
+    font-weight: 500;
+}
+
+.testimonio .confundador{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/*Section style Hablemos*/
+
+.hablemos{
+    margin-top: 50px;
+    font-family: "Poppins";
+}
+
+.hablemos p{
+    padding: 20px 0;
+}
+
+
+.hablemos form div{
+    padding: 5px 0;
+}
+
+.hablemos form div label{
+    display: block;
+}
+
+.hablemos form div label span{
+    color: red;
+}
+
+
+.hablemos form div input[type="text"]{
+    appearance: none;
+    outline: none;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.hablemos form div textarea{
+    resize: none;
+    outline: none;
+    appearance: none;
+    border: 1px solid #eee;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+input[type="submit"]{
+    padding: 10px;
+    width: 100%;
+    border-radius: 16px;
+    outline: none;
+    appearance: none;
+    background-color: rgba(66, 226, 184, 1);
+    font-weight: 700;
+}
+
+/*Footer styled*/
+footer{
+    font-family: "Poppins";
+    text-align: center;
+}
+
+footer .sociales{
+    padding: 20px 0;
+}
+
+footer .sociales i{
+    padding-left: 10px;
+}
+
+footer .info-pie p{
+    padding: 5px 0;
+}
+
+footer .info-pie p span{
+    font-size: 20px;
+    font-weight: 900;
+ }
