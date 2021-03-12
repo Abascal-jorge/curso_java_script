@@ -10,16 +10,3 @@ body{
     top: 544px;
     background: radial-gradient(155% 155% at 50% 50%, rgba(40, 234, 232, 0.4) 0%, rgba(40, 234, 232, 0) 28.86%);
 }
-
-.img-principal{
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-.img-principal .vector-verde{
-    grid-column: 1 / 2;
-}
-
-.img-principal .vector-morado{
-    grid-column: 1 / 2;
-}
