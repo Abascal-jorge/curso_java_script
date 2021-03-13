@@ -12,7 +12,7 @@ body{
 }
 
 .contenedor{
-    max-width: 1300px;
+    max-width: 1000px;
     margin: auto;
     padding: 20px;
 }
@@ -25,8 +25,24 @@ body{
     font-family: "Poppins";
 }
 
-.menu-principal .navegacion{
+.menu-principal .navegacion ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+.navegacion{
     display: none;
+    font-size: 18px;
+}
+
+.navegacion ul li a{
+    text-decoration: none;
+    color: rgba( 0, 0, 0, .7);
+    padding: 10px;
+}
+
+.navegacion ul li a:hover{
+    color: black;
 }
 
 .menu-principal .logo p{
@@ -35,6 +51,8 @@ body{
 
 .menu-principal button{
     background-color: rgba(66, 226, 184, 1);
+    font-size: 16px;
+    font-family: "Poppins";
     padding: 10px;
     border-radius: 16px;
     border: none;
@@ -68,7 +86,6 @@ body{
 
 .datos-personales .texto-descripcion{
     letter-spacing: 1;
-    font-size: 10.5px;
     padding-bottom: 15px;
 }
 
@@ -198,6 +215,7 @@ img{
     border-radius: 16px;
     background-color: rgba(66, 226, 184, 1);
     font-family: "Poppins";
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -299,6 +317,10 @@ input[type="submit"]{
     font-weight: 700;
 }
 
+input[type="submit"]:hover{
+    background: none;
+}
+
 /*Footer styled*/
 footer{
     font-family: "Poppins";
@@ -320,4 +342,99 @@ footer .info-pie p{
 footer .info-pie p span{
     font-size: 20px;
     font-weight: 900;
+ }
+
+ @media screen and (min-width: 760px) {
+    .navegacion{
+        display: block;
+    }
+    .flex-info{
+        flex-direction: row;
+    }
+
+    .datos-personales{
+        order: -1;
+    }
+    
+    .vector-verde img{
+        width: 338.05px;
+        height: 248.56px;
+    }
+    
+    .vector-morado img{
+        margin-top: -10px;
+        width: 264.05px;
+        height: 254.77px;
+    }
+    
+    .imagen img{
+        width: 223.36px;
+        height: 224.44px;
+        margin-left: -30px;
+        margin-top: -30px;
+    }
+
+    .datos-personales{
+        flex-basis: 40%;
+    }
+    .flex-info .img-principal{
+        flex-basis: 60%;
+    }
+    .info-proyecto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .datos-pagina{
+        order: -1;
+        padding: 40px;
+    }
+
+    .enlace-sitio{
+        display: flex;
+    }
+
+    .enlace-sitio button:first-of-type{
+        margin-right: 10px;
+    }
+    .right-info{
+        order: 2;
+    }
+    .testimonio p{
+        text-align: center;
+    }
+    .hablemos .contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contenedor-form{
+        max-width: 500px;
+    }
+    .hablemos .title-enlace{
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+    .hablemos .title-enlace:before{
+        width: 98%;
+    }
+    footer .contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-pie{
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .info-pie p:first-of-type{
+        margin-right: 20px;
+    }
+    .sociales{
+        margin-left: 20px;
+        order: 2;
+    }
  }
